@@ -42,8 +42,8 @@ main {
     margin: 0px 40px;
 }
 
-#hebergements,
-#populaires {
+.hebergements,
+.populaires {
     padding: 25px 40px 50px 40px;
 }
 
@@ -51,7 +51,7 @@ main {
     margin-top: 30px;
 }
 
-#activites {
+.activites {
     margin-top: 40px;
 }
 
@@ -59,31 +59,31 @@ footer {
     margin-top: 40px;
 }
 
-/* --------------- #seloger -----------------------------*/
-#seloger {
+/* --------------- .seloger -----------------------------*/
+.seloger {
     display: flex;
     gap: 40px;
 }
 
-#hebergements,
-#populaires {
+.hebergements,
+.populaires {
     background-color: var(--bk-gray);
     border-radius: 15px;
 }
 
-/* -------------- #hebergements  -------------------------*/
-#hebergements {
+/* -------------- .hebergements  -------------------------*/
+.hebergements {
     width: 66.7%;
 }
 
-#hebergements>div {
+.hebergements>div {
     /* conteneur flex des cards hébergements */
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
 }
 
-#hebergements>a {
+.hebergements>a {
     /* afficher plus */
     display: inline-block;
     font-weight: 700;
@@ -93,7 +93,7 @@ footer {
 }
 
 /*--------------- card Hébergement ------------------------------------*/
-#hebergements>div>a {
+.hebergements>div>a {
     /* chacune des cards hébergement */
     /* pas plus de 3 cards par ligne */
     width: max(220px, 25%);
@@ -105,36 +105,36 @@ footer {
     padding: 5px 5px 10px 5px;
 }
 
-#hebergements>div>a img {
+.hebergements>div>a img {
     width: 100%;
     height: 60%;
     object-fit: cover;
     border-radius: 15px 15px 0px 0px;
 }
 
-#hebergements>div>a img+p {
+.hebergements>div>a img+p {
     /* Nom de l'hôtel */
     font-weight: 700;
     margin: 5px 10px;
 }
 
-#hebergements>div>a img+p+p {
+.hebergements>div>a img+p+p {
     /* Nuit à partir de ... */
     font-size: 14px;
     margin: 5px 10px;
 }
 
-#hebergements>div>a span {
+.hebergements>div>a span {
     /* englobe les étoiles */
     margin: 5px 10px;
 }
 
-#hebergements>div>a .fa-star,
-#populaires>div>a .fa-star {
+.hebergements>div>a .fa-star,
+.populaires>div>a .fa-star {
     font-size: 12px;
 }
 
-#hebergements>div>a:hover img+p+p {
+.hebergements>div>a:hover img+p+p {
     /* Nuit à partir de */
     color: black;
 }
@@ -147,21 +147,21 @@ footer {
     color: #d9d9d9;
 }
 
-/* -------------- #populaires    -------------------------*/
-#populaires {
+/* -------------- .populaires    -------------------------*/
+.populaires {
     display: flex;
     flex-direction: column;
     width: 33.3%;
 }
 
-#populaires>div:first-child {
+.populaires>div:first-child {
     /* entête les plus populaires avec l'étoile */
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-#populaires>div:last-child {
+.populaires>div:last-child {
     /* Le conteneur des cards populaires */
     display: flex;
     flex-direction: column;
@@ -170,7 +170,7 @@ footer {
 }
 
 /*---------------- card Populaires ----------------------------------*/
-#populaires>div>a {
+.populaires>div>a {
     /* chacune des cards populaires */
     display: flex;
     border-radius: 15px;
@@ -181,7 +181,19 @@ footer {
     border-radius: 20px;
 }
 
-#populaires>div>a>div {
+@media all and (min-width: 992px) and (max-width: 1320px) {
+    .populaires>div>a {
+        min-height: 190px;
+    }
+}
+
+@media all and (min-width: 992px) and (max-width: 1320px) {
+    .populaires>div>a {
+        min-height: 170px;
+    }
+}
+
+.populaires>div>a>div {
     /* conteneur de l'ensemble de la description */
     display: flex;
     flex-direction: column;
@@ -189,28 +201,28 @@ footer {
     padding: 10px 20px 8px 20px;
 }
 
-#populaires>div>a img {
+.populaires>div>a img {
     width: 40%;
     object-fit: cover;
     border-radius: 15px 0px 0px 15px;
 }
 
-#populaires>div>a>div>div>p:first-child {
+.populaires>div>a>div>div>p:first-child {
     /* Nom de l'hôtel */
     font-weight: 700;
     margin: 0px;
 
 }
 
-#populaires>div>a div>div>p:first-child+p {
+.populaires>div>a div>div>p:first-child+p {
     /* Nuit à partir de */
     color: black;
     margin: 10px 0px;
 }
 
-/* -------------- #activites     --------------------------*/
+/* -------------- .activites     --------------------------*/
 
-#activites>div {
+.activites>div {
     /* conteneur flex des cards activités */
     display: flex;
     flex-direction: column;
@@ -220,7 +232,7 @@ footer {
     height: 450px;
 }
 
-#activites>div>a {
+.activites>div>a {
     /* chacune des cards activités */
     display: flex;
     flex-direction: column;
@@ -230,19 +242,19 @@ footer {
     box-shadow: 3px 5px 5px #ddd;
 }
 
-#activites>div>a:nth-child(3n+1) {
+.activites>div>a:nth-child(3n+1) {
     /* chacune des 2 deux cards hautes */
     height: 450px;
 }
 
-#activites>div>a img {
+.activites>div>a img {
     height: 40px;
     object-fit: cover;
     border-radius: 15px 15px 0px 0px;
     flex-grow: 1;
 }
 
-#activites>div>a p {
+.activites>div>a p {
     /* le texte de légende */
     font-weight: 700;
     margin: 15px 15px;
@@ -251,7 +263,7 @@ footer {
     white-space: nowrap;
 }
 
-/* -------------- #footer ----------------------------------*/
+/* -------------- .footer ----------------------------------*/
 footer {
     background-color: var(--bk-gray);
     padding: 30px 40px;
@@ -261,7 +273,7 @@ footer>div {
     /* englobe les trois sections */
     display: flex;
     justify-content: space-between;
-        /* limite la largeur */
+    /* limite la largeur */
     max-width: 940px;
 }
 
@@ -273,6 +285,7 @@ footer>div>section {
 footer a {
     line-height: 30px;
 }
+
 /*-----------------------------------------------------------*/
 /*                      HEADER                               */
 /*-----------------------------------------------------------*/
@@ -315,7 +328,7 @@ form div:first-child i {
     font-size: 18px;
 }
 
-#loc-icon {
+.loc-icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -325,7 +338,7 @@ form div:first-child i {
     border-radius: 15px 0px 0px 15px;
 }
 
-#find {
+.find {
     border: 1px solid var(--bk-gray);
     outline: 0;
     min-width: 230px;
@@ -337,7 +350,7 @@ form div:first-child i {
 
 }
 
-#find-button {
+.find-button {
     display: flex;
     align-items: center;
     color: white;
@@ -350,17 +363,17 @@ form div:first-child i {
     background-color: var(--bk-blue);
 }
 
-#find-button-small {
+.find-button-small {
     display: none;
 }
 
-#recherche p {
+.recherche p {
     margin: 5px 0px 15px 0px;
 }
 
 
 /*--------------------- filtres ------------------------------------------------*/
-#filtres {
+.filtres {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -370,27 +383,27 @@ form div:first-child i {
     min-width: 300px;
 }
 
-#filtres>p {
+.filtres>p {
     /* le texte "filtre" */
     margin: 5px 20px 10px 0px;
 }
 
-#filtres>div {
+.filtres>div {
     /* Englobe tout un filtre */
     display: flex;
     align-items: center;
     margin: 5px 20px 5px 0px;
 }
 
-#filtres>div>div:hover {
+.filtres>div>div:hover {
     /* passage au-dessus du texte du filtre */
     cursor: pointer;
-    color: #777;
+    color: .777;
     border-color: #d0e0ff;
     background-position: left bottom;
 }
 
-#filtres>div>div {
+.filtres>div>div {
     /* chaque texte du filtre */
     border: solid 2px #d9d9d9;
     padding: 10px 15px 10px 50px;
@@ -404,7 +417,7 @@ form div:first-child i {
     transition: all 0.5s ease;
 }
 
-#filtres>div>i {
+.filtres>div>i {
     /* l'icone de chaque filtre */
     display: flex;
     align-items: center;
@@ -419,20 +432,20 @@ form div:first-child i {
 
 
 /*------ partie info des filtres -------------*/
-#info {
+.info {
     display: flex;
     align-items: baseline;
 }
 
-#info p {
+.info p {
     margin: 0;
 }
 
-#info>span:last-child {
+.info>span:last-child {
     display: inline;
 }
 
-#info>span:first-child {
+.info>span:first-child {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -446,5 +459,4 @@ form div:first-child i {
     padding-top: 2px;
     color: var(--bk-blue);
 }
-
 
