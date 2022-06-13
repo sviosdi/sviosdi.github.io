@@ -100,7 +100,25 @@ Les tailles de fontes pour <b>h1</b> et <b>h2</b> sont les mêmes.
 </section>
 
 <section>
-<h2 id='2'> Passage de la version desktop à la version smartphone</h2>
+<h2 id='2'>Le découpage du site</h2>
+<p>
+<style>
+#decoupe {
+ width: 450px;
+ position: relative;
+ left: 120px;
+}
+
+</style>
+<a href='./img/booky-decoupage.png' target='_blank'>
+  <img id="decoupe" src='./img/booky-decoupage.png' alt='no alt'>
+</a>
+</p>
+
+</section>
+
+<section>
+<h2 id='3'> Passage de la version desktop à la version smartphone</h2>
 <p>
 La structure HTML précédente est valide quand on passe d'une version à l'autre, mais attention : dans la section <b>section</b> <span class='cs'>#seloger</span> les divisions  <span class='cs'>#hebergements</span> et <span class='cs'>#populaires</span> sont inversées en version smartphone et disposées non plus en ligne mais en colonne. On obtiendra ce résultat en ajoutant à la flexbox <span class='cs'>#seloger</span> la propriété : <span class='cs'>flex-flow: column-reverse</span>.
 </p>
@@ -139,7 +157,8 @@ Nous pouvons d'ors et déjà commencer à ce stade à traduire tout ce qui a ét
           <div><span>Dans cet article</span></div>
           <ul><li><a href='#0'>Les principales balises HTML5</a></li>
 <li><a href='#1'>Premières observations.</a></li>
-<li><a href='#2'> Passage de la version desktop à la version smartphone</a></li>
+<li><a href='#2'>Le découpage du site</a></li>
+<li><a href='#3'> Passage de la version desktop à la version smartphone</a></li>
            </ul>
 
         </div>

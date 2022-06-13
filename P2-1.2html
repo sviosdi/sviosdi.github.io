@@ -37,6 +37,10 @@ Les tailles de fontes pour ¤b¤h1¤b¤ et ¤b¤h2¤b¤ sont les mêmes.
 
 ¤hr¤
 
+¤h2s¤Le découpage du site
+
+¤img¤./img/booky-decoupage.png¤¤
+
 ¤h2s¤ Passage de la version desktop à la version smartphone
 La structure HTML précédente est valide quand on passe d'une version à l'autre, mais attention : dans la section ¤b¤section¤b¤ `#seloger` les divisions  `#hebergements` et `#populaires` sont inversées en version smartphone et disposées non plus en ligne mais en colonne. On obtiendra ce résultat en ajoutant à la flexbox `#seloger` la propriété : `flex-flow: column-reverse`.
 On observe aussi que :
