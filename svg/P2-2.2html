@@ -1,0 +1,154 @@
+title OpenClassrooms
+h1 Développeur d'applications Javascript-React
+h1s Projet 2 - Etape 2 : trame de l'affichage des cards. 
+
+¤h2s¤Choix techniques
+On distingue trois conteneurs de cards :
+¤ol¤
+Hébergements à Marseille
+Les plus populaires
+Activités à Marseille
+¤
+
+"Grid" me semble être un véritable affichage 2D sous forme de grille. tandis que Flexbox est un affichage à une dimension (une direction) qui peut simuler un affichage 2D par des passages à la ligne grâce à `flex-wrap: wrap`. Autant flexbox me semble adapté pour afficher les cards de la partie "Les plus populaires" ou à de nombreux autres endroits du site, autant je trouve plus naturel d'utilser les grids pour les parties "Hébergements à Marseille" et "Activités à Marseille". Cependant dans le documents pdf : ¤i¤Spécifications techniques et fonctionnelles¤i¤, intitulé ¤i¤"Note de synthèse - Nouveau site Booki"¤i¤, dans la partie "Spécifications techniques" il est précisé : ¤i¤Il est important d’utiliser Flexbox plutôt que Grid car c’est la techno que l’équipe maîtrise le mieux.¤i¤, alors que l'autre document pdf accompagnant le projet, intitulé ¤i¤"Etapes clés"¤i¤, en fin de document il est indiqué : ¤i¤"Il est recommandé d’utiliser Flexbox car son utilisation est très répandue, mais vous êtes libre d’utiliser CSS Grid si vous préférez."¤i¤
+
+Dans le doute je n'utiliserai pas les grids dans la version présentée ici, mais flexbox. Je trouve d'ailleurs plus intéressant d'un point de vue pédagogique d'utiliser les flexbox. 
+
+¤h2s¤ Affichage des cards "Hébergements à Marseille"
+
+¤u¤Définition et analyse du comportement attendu en mode desktop¤u¤
+¤ul¤
+Toutes les cards seront affichées avec des dimensions identiques.
+La hauteur de card est constante quelle que soit la largeur du conteneur et fixée à 190px.
+La largeur de card est extensible/réductible  en fonction de la largeur du conteneur de manière à ce qu'un ligne occupe le maximum de la largeur disponible du conteneur.
+Les cards seront disposées en forme de rectangle. 
+Pour des raisons esthétiques, elles ne feront pas moins de 200px de largeur.
+¤
+
+Avec ces contraintes, on voit qu'on ne pourra pas mettre plus de 3 cards sur une ligne. Sinon on se retrouverait dans une situation : 4 + 2 ou 5 + 1 qui ne dispose pas les cards identiques en forme de rectangle. Reste la situation des 6 cards sur une ligne, qui n'est sans doute pas esthétique et ne serait réalisable sans doute que sur des écrans particulièrement larges.
+Reste donc les affichages possibles [col x lignes] : 3x2, 2x3 et 1x6.
+
+¤u¤Réalisation¤u¤
+Le conteneur est contraint en largeur et non en hauteur. On utilisera donc `flex-direction: row` (par défaut) avec `flex-wrap: wrap`. Pour ne pas avoir plus de 4 cards sur une ligne, on imposera aux cards une largeur minimale un peu plus grande que 25% de la largeur disponible du conteneur et compte tenu de la largeur minimale imposée de 200px on fixera pour chaque card : `min-width: max(200px, 25%)`.
+Ensuite, pour occuper au mieux la largeur, on fixera pour chacune des cards `flex-grow: 1`. S'il reste de la place sur une ligne, elle sera ainsi uniformément répartie sur chaque card déjà placée sur cette ligne de manière à ce que les cards occupent le maximum de la largeur du conteneur.
+
+¤fc¤
+¤m #hebergements div a
+/* En mode desktop */
+#hebergements>div {
+    /* conteneur flex des cards hébergements */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+#hebergements>div>a {
+    /* chacune des cards hébergement */
+    border-radius: 15px;
+    min-width: max(200px, calc(25% + 10px));
+    height: 190px;
+    flex-grow: 1;
+}
+¤
+
+¤u¤En mode smartphone ou tablette¤u¤ on redimensionnera les conteneurs globaux à `100%` pour perdre les rapports `2/3 1/3` lorsque les breakpoints sont atteints. Sinon rien n'est changé, car le comportement est le même que pour le mode desktop.
+¤fc¤
+¤m #hebergements #populaires 
+/* En mode smartphone ou tablette */
+#hebergements, #populaires {
+    width: 100%;
+}
+¤
+
+¤hr¤
+
+¤h2s¤ Affichage des cards "Les plus populaires"
+¤u¤Définition et analyse du comportement attendu en mode desktop¤u¤
+¤ul¤
+Toutes les cards seront affichées avec des dimensions identiques sous forme d'une seule colonne.
+La hauteur de card est constante quelle que soit la largeur du conteneur et fixée à 190px.
+La largeur de card est extensible/réductible en fonction de la largeur du conteneur de manière à occuper le maximum de la largeur disponible du conteneur.
+¤
+
+
+¤u¤Réalisation¤u¤
+
+¤fc¤
+¤m #populaires div a
+/* En mode desktop */
+#populaires>div {
+    /* conteneur flex des cards populaires */
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+#populaires>div>a {
+    /* chacune des cards populaires */
+    border-radius: 15px;
+    min-width: 200px;
+    height: 150px;
+}
+¤
+¤hr¤
+
+¤u¤En mode smartphone ou tablette¤u¤, comme précédemment, rien n'est changé, seule la taille du conteneur global est redimensionnée à 100% car le comportement est inchangé.
+
+
+¤h2s¤ Affichage des cards "Activités à Marseille"
+¤u¤Définition et analyse du comportement attendu en mode desktop¤u¤
+Sans tout décrire, on retiendra essentiellement que :
+¤ul¤
+la hauteur du conteneur des cards est fixe et égale à la hauteur de la première card qui sera fixée à 450px.
+Le gap sera fixé à 30px.
+Les plus petites card auront donc pour hauteur fixe (450 - 30) / 2 = 210px.
+Les hauteurs des cards sont fixes et leurs largeurs toutes égales et extensibles/réductibles de maniètre à occuper le maximum de largeur du conteneur.
+¤
+
+¤u¤Réalisation¤u¤
+
+La hauteur globale du conteneur n'étant pas variable, on pourra le contraindre à une hauteur fixe de 450ppx et utiliser `flex-direction: column` et `flex-wrap: wrap`. On donnera à chaque carte une hauteur de 210px, puis on écrasera cette valeur par 450px pour les 1ère et 4ème cards.
+
+¤fc¤
+¤m #activités div a
+/* En mode desktop */
+#activites>div {
+    /* conteneur flex des cards activités */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 30px;
+    height: 450px;
+}
+
+#activites>div>a {
+    /* chacune des cards activités */
+    border-radius: 15px;
+    height: 210px;
+}
+
+#activites>div>a:nth-child(3n+1) {
+    height: 450px;
+}
+¤
+
+¤u¤En mode smartphone ou tablette¤u¤, on abandonne cet affichage pour utiliser un affichage avec des cards de dimensions identiques de même hauteur mais toujours exensibles/réductibles en largeur mais visuellement plus allongées. On fera en sorte que l'affichage se fasse sur une colonne en mode "smartphone" et sur deux colonnes en mode "tablette". Pour cela on fixera pour la largeur de chaque card `min-width` à une valeur proche de la moitié de l'espace disponible pour le mode tablette et à tout l'espace disponible pour le mode smartphone.
+¤fc¤
+/* En mode tablette */
+#activites>div {
+    /* conteneur flex des cards activités */
+    flex-direction: row;  
+    height:unset;
+}
+
+#activites>div>a {
+    /* chacune des cards activités */
+    min-width: calc((100% - 30px)/2);  /* 100% pour le mode smartphone */
+    flex-grow: 1;
+    height: 180px;
+}
+
+#activites>div>a:nth-child(3n+1) {
+    height: 180px;    
+}
+¤

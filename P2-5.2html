@@ -1,0 +1,80 @@
+title OpenClassrooms
+h1 Développeur d'applications Javascript-React
+h1s Projet 2 - Etape 5 : Pied de page 
+
+¤h2s¤Pied de page<br>mode desktop
+
+
+¤fc¤
+¤t footer div section h3 a 
+¤m href
+/* HTML */
+<footer>
+    <div>
+        <section>
+            <h3>A propos</h3>
+            <a href="#">Fonctionnement du site</a>
+            <a href="#">Conditions générale de vente</a>
+            <a href="#">Données et confidentialité</a>
+        </section>
+        <section>
+            <h3>Nos hébergements</h3>
+            <a href="#">Charte qualité</a>
+            <a href="#">Soumettre votre hôtel</a>
+        </section>
+        <section>
+            <h3>Assistance</h3>
+            <a href="#">Centre d'aide</a>
+            <a href="#">Nous contacter</a>
+        </section>
+    </div>
+</footer>
+¤
+
+¤u¤en mode desktop et tablette¤u¤
+
+¤fc¤
+¤m footer div section a
+/* styles.css  */
+footer {
+    margin-top: 40px;
+}
+
+footer {
+    background-color: var(--bk-gray);
+    padding: 30px 40px;
+}
+
+footer>div {
+    /* englobe les trois sections */
+    display: flex;
+    justify-content: space-between;
+    /* limite la largeur */
+    max-width: 940px;
+}
+
+footer>div>section {
+    display: flex;
+    flex-direction: column;
+}
+
+footer a {
+    line-height: 30px;
+}
+¤
+
+¤u¤en mode smartphone¤u¤
+
+¤fc¤
+¤m footer div section a
+/* smartphones.css  */
+footer {
+    padding: 20px 20px;
+}
+
+footer>div {
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 35px;
+}
+¤

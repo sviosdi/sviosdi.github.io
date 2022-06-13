@@ -1,0 +1,141 @@
+/* --------------- #seloger      -----------------------------------*/
+#seloger {
+    flex-flow: column-reverse;
+    width: 100%;
+    gap: 0px;
+}
+
+#hebergements, #populaires {
+    border-radius: 0px;
+    width: 100%;
+}
+
+/*---- positionnement des principaux éléments de la trame ---------*/
+header, main {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+header>div {
+    margin: 0px 20px;
+}
+
+#hebergements, #populaires, #activites {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#populaire {
+    min-width: 360px;
+}
+/* on limite la hauteur des cards à 130px */
+#populaires>div>a {
+    height: 130px;
+}
+
+#activites {
+    margin-top: 0px;
+}
+
+#activites>div {
+    /* conteneur flex des cards activités */
+    flex-direction: row;
+    height: unset;
+    width: 100%;
+    gap: 30px;
+}
+
+#activites>div>a {
+    /* chacune des cards activités */
+    flex-grow: 1;
+    height: 180px;
+    min-width: 100%;
+}
+
+#activites>div>a:nth-child(3n+1) {
+    height: 180px;
+}
+
+
+
+footer {
+    padding: 20px 20px;
+}
+
+/* -------------- #hebergements  -----------------------------------*/
+#hebergements {
+    background-color: white;
+    
+}
+
+
+/* -------------- #footer        -----------------------------------*/
+footer>div {
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 35px;
+   
+}
+
+/*-----------------------------------------------------------*/
+/*                      HEADER                               */
+/*-----------------------------------------------------------*/
+/* ---------------- navigation ------------------------------*/
+nav {
+    display: block;
+    text-align: center;
+}
+
+nav>div {
+    display: flex;
+}
+
+nav img {
+    margin: 20px auto 10px auto;
+}
+
+nav a {
+    flex: 1;
+    padding: 12px 0px;
+    border-bottom: solid 3px var(--bk-gray);
+    border-top: none;
+}
+
+nav a:hover {   
+    border-top: none;
+    border-bottom: solid 3px var(--bk-blue);
+}
+
+/*---------------- recherche -------------------------------------------*/
+#find-button #find-button-small {
+    border-radius: 15px 15px 15px 15px;
+    font-size: 18px;
+}
+
+#find-button {
+    display: none;
+}
+
+form {
+    position: relative;
+}
+
+#find {
+    width: 100%;
+}
+
+#find-button-small {
+    position: absolute;
+    left: calc(100% - 52px);
+    display: block;
+    width: 56px;
+    height: 52px;
+    border-radius: 15px;
+    background-color: var(--bk-blue);
+    border-color: var(--bk-blue);
+    color: white;
+}
+
+
+
+

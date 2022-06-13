@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="40" height="30" xmlns="http://www.w3.org/2000/svg">
+<style>
+    .ns {
+        font-family: Lato;
+        font-size:25px;
+        font-weight: 400;
+        fill:white;
+    }
+</style>
+<path d="M0 6 l6 -6 h34 v24 l-6 6 h-34 Z"  stroke="tranparent" style="fill:#43b243;"/>
+<text x="6" y="24" class="ns">Ns</text>
+</svg>

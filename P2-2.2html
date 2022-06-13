@@ -1,0 +1,264 @@
+title OpenClassrooms
+h1 Développeur d'applications Javascript-React
+h1s Projet 2 - Etape 2 : Misen en place de la trame globale.
+
+¤h2s¤L'entête header
+¤fc¤
+¤t header nav div h1 
+¤m id
+/* HTML */
+<header>
+    <nav>
+        Navigation
+        <!-- temporaire -->
+    </nav>
+    <div>
+        <div id="recherche">
+            <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+            Recherche
+            <!-- temporaire -->
+        </div>
+        <div id="filtres">
+            Filtres
+            <!-- temporaire -->
+        </div>
+        <div id="info">
+            Info
+            <!-- temporaire -->
+        </div>
+    </div>
+</header>
+¤
+
+
+¤hr¤
+
+¤h2s¤Le corps principal main.
+¤fc¤
+¤t main section div h2 a i
+¤m id href class
+/* HTML */
+<main>
+
+    <section id="seloger">
+        <div id="hebergements">
+            <h2>Hébergements à Marseille</h2>
+            <div>
+                <!-- conteneur des cards hébergements -->
+            </div>
+            <a href="#">Afficher plus</a>
+        </div>
+        <div id="populaires">
+            <div>
+                <h2>Les plus populaires</h2><i class="fa-solid fa-star"></i>
+            </div>
+            <div>
+                <!-- conteneur des cards populaires -->
+            </div>
+        </div>
+    </section>
+
+    <section id="activites">
+        <h2>Activités à Marseille</h2>
+        <div>
+            <!-- conteneur des cards activités -->
+        </div>
+    </section>
+
+</main>
+¤
+
+
+¤fc¤
+¤m #seloger #hebergements #populaires #activites div a first child last
+/* styles.css */
+/* --------------- #seloger ---------------------------------------*/
+#seloger {
+    display: flex;
+    gap: 40px;
+}
+
+#hebergements,
+#populaires {
+    background-color: var(--bk-gray);
+    border-radius: 15px;
+}
+
+/* -------------- #hebergements  -----------------------------------*/
+#hebergements {
+    width: 66.7%;
+}
+#hebergements>div {
+    /* conteneur flex des cards hébergements */
+}
+
+#hebergements>a {
+    /* afficher plus */
+    display: inline-block;
+    font-weight: 700;
+    margin-left: 10px;
+    margin-top: 40px;
+    font-size: 18px;
+}
+
+
+/* -------------- #populaires    -----------------------------------*/
+#populaires {
+    display: flex;
+    flex-direction: column;
+    width: 33.3%;  
+}
+
+#populaires>div:first-child {
+    /* entête les plus populaires avec l'étoile */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#populaires>div:last-child {
+    /* Le conteneur des cards populaires */
+    flex-grow: 1;    
+}
+¤
+
+¤fc¤
+¤m header main #hebergements #populaires #activites footer
+/* styles.css */
+/*---- positionnement des principaux éléments de la trame ---------*/
+header, main {
+    margin: 0px 40px;
+}
+
+#hebergements, #populaires {
+    padding: 25px 40px 50px 40px;
+}
+
+main {
+    margin-top: 30px;
+}
+
+#activites {
+    margin-top: 40px;
+}
+
+footer {
+    margin-top: 40px;
+}
+¤
+
+¤hr¤
+
+¤h2s¤Le pied de page footer.
+¤fc¤
+¤t footer div section h3
+¤m
+/* HTML */
+<footer>
+    <div>
+        <section>
+            <h3>A propos</h3>
+        </section>
+        <section>
+            <h3>Nos hébergements</h3>
+        </section>
+        <section>
+            <h3>Assistance</h3>
+        </section>
+    </div>
+</footer>
+¤
+
+¤fc¤
+¤m footer div section
+/* styles.css */
+/* -------------- #footer        -----------------------------------*/
+footer {
+    background-color: var(--bk-gray);
+    padding: 30px 40px;
+}
+
+footer>div { /* englobe les trois sections */
+    display: flex;
+    justify-content: space-between;
+    max-width: 940px;         /* limite la largeur */
+}
+¤
+
+¤hr¤
+
+¤h2s¤Changements en mode smartphone
+¤fc¤
+¤m #seloger #hebergements #populaires header main div #activites footer last child
+/* smartphones.css */
+/* --------------- #seloger      -----------------------------------*/
+#seloger {
+    flex-flow: column-reverse;
+    width: 100%;
+    gap: 0px;
+}
+
+#hebergements, #populaires {
+    border-radius: 0px;
+    width: 100%;
+}
+
+/*---- positionnement des principaux éléments de la trame ---------*/
+header, main {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+header>div {
+    margin: 0px 20px;
+}
+
+#hebergements, #populaires, #activites {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+footer {
+    padding: 20px 20px;
+}
+
+/* -------------- #hebergements  -----------------------------------*/
+#hebergements {
+    background-color: white;
+}
+
+#populaires>div:last-child {
+    /* Le conteneur des cards populaires */
+}
+
+/* -------------- #footer        -----------------------------------*/
+footer>div {
+    flex-direction: column;
+}
+¤
+
+
+
+¤hr¤
+
+
+¤h2s¤Changements en mode tablette
+
+¤fc¤
+¤m #seloger #hebergements #populaires
+/* tablettes.css */
+#seloger {
+    flex-flow: column-reverse;
+    width: 100%;
+}
+
+#hebergements, #populaires {
+    width: 100%;
+}
+
+¤
+
+¤hr¤
+
+

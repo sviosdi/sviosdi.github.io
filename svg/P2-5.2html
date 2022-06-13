@@ -1,0 +1,109 @@
+title OpenClassrooms
+h1 Développeur d'applications Javascript-React
+h1s Projet 2 - Etape 4 : Réalisation des trois types de cards. 
+
+¤h2s¤Card "Hébergements à Marseille"
+¤fc¤
+¤t
+¤m
+/* HTML */
+<a href="#">
+    <img src="./images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
+        alt="Photo d'une chambre lits superposés à l'Auberge de la Cannebière">
+    <p>Auberge La Cannebière</p>
+    <p>Nuit à partir de <b>25€</b></p>
+    <span>
+        <i class="fa-solid fa-star on"></i><i class="fa-solid fa-star on"></i><i
+            class="fa-solid fa-star on"></i><i class="fa-solid fa-star on"></i><i
+            class="fa-solid fa-star off"></i>
+    </span>
+</a>
+¤
+
+
+¤fc¤
+/* css pour tous les affichages */
+#hebergements>div>a {
+    /* chacune des cards hébergement */
+    background-color: burlywood;
+    /* temporaire */
+    border-radius: 15px;
+    width: max(200px, 25%);
+    height: 190px;
+    flex-grow: 1;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 5px 5px #ddd;
+}
+
+#hebergements>div>a img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    border-radius: 15px 15px 0px 0px;
+}
+
+#hebergements>div>a img+p {
+    font-weight: 700;
+    margin: 5px 10px;
+}
+
+#hebergements>div>a img+p+p {
+    font-size: 14px;
+    margin: 5px 10px;
+}
+
+#hebergements>div>a span {
+    margin: 5px 10px;
+}
+
+#hebergements>div>a .fa-star,
+.card-p .fa-star {
+    font-size: 12px;
+}
+
+#hebergements>div>a:hover img+p+p {
+    color: black;
+}
+
+.on {
+    color: var(--bk-blue);
+}
+
+.off {
+    color: #d9d9d9;
+}
+¤
+
+
+¤hr¤
+
+¤h2s¤Card "Les plus populaires"
+
+¤fc¤
+¤t a div p img span i
+¤m href class
+/* HTML */
+<a href="#">
+    <img src="./images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg"
+        alt="Photo d'une chambre de l'Hôtel Le soleil du matin">
+    <div>
+        <p>Hôtel Le soleil du matin</p>
+        <p>Nuit à partir de <b>128€</b></p>
+        <span>
+            <i class="fa-solid fa-star on"></i><i class="fa-solid fa-star on"></i><i
+                class="fa-solid fa-star on"></i><i class="fa-solid fa-star on"></i><i
+                class="fa-solid fa-star on"></i>
+        </span>
+    </div>
+</a>
+¤
+
+
+
+
+¤hr¤
+
+¤h2s¤Card "Activités à Marseille"
+
+¤hr¤

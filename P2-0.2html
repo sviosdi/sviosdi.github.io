@@ -1,0 +1,109 @@
+title OpenClassrooms
+h1 Développeur d'applications Javascript-React
+h1s Projet 2 - Etape 0 : initialisation du site, préparation des styles.
+¤h2s¤ Le code
+
+¤fc¤
+/* HTML */
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Booki Vacances</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <script src="https://kit.fontawesome.com/142b14e2d0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" media="all and (max-width: 768px)" href="./css/smartphones.css">
+    <link rel="stylesheet" media="all and (min-width: 768px) and (max-width: 992px)" href="./css/tablettes.css">
+</head>
+
+<body>
+
+</body>
+
+</html>
+¤
+¤fc¤
+¤t root html before after
+/* css - styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;700&display=swap');
+
+:root {
+  --bk-blue: #0065fc;
+  --bk-light-blue: #deebff;
+  --bk-gray: #f2f2f2;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+¤
+¤hr¤
+¤h2s¤Balise meta & viewport
+Le `viewport` est la partie rectangulaire visible de la page dans la fenêtre du navigateur ou tout l'écran si la page est visualisée en mode plein écran. 
+Les mobiles ont un écran étroit et la page à afficher est souvent plus large que cet écran. Si le mobile affichait cette page telle quelle, on en verrai qu'une petite partie. Les mobiles ont donc pour habitude d'effectuer le rendu de la page sur un `viewport virtuel` puis de réduire la vue (zoom arrière) à la taille de l'écran du smartphone. Ceci permet :
+¤ul¤
+d'avoir une vue globale entière de la page.
+de permettre de manipuler ensuite la vue par zoom avant et par translations (scroll-défilement).
+¤
+Ce comportement par défaut des smartphones est fait pour permettre aux nombreuses pages non optimisées pour les mobiles d'avoir un aspect général de l'affichage initial de la page plus acceptable (plutôt qu'un morceau de page coupée en largeur par exemple).
+Cependant ce mécanisme vient contrarier l'efficacité de l'affichage des pages de sites optimisés pour les mobiles grâce au les `media queries` : si par exemple le `viewport virtuel` est 980px (c'est surtout sa largeur qui importe), des `media queries` qui déclenchent à 640px ou 480px ou moins ne seraient jamais utilisées. En effet, par un déclenchement à 640px, le `css` commande au navigateur par sa `media query` d'effectuer l'affichage d'une certaine façon si son `viewport` devient inférieur à 640px, ce que le navigateur ignorera, car il considérera son `viewport virtuel` toujours à 980px.
+Généralement, pour permettre d'optimiser un site pour mobile on introduira la balise `meta` suivante :
+¤fc¤
+¤t name content
+¤m meta
+<meta name="viewport" content="width=device-width, initial-scale=1">
+¤
+La propriété `width` peut être exprimée en nombre de pixels-css : `width=600` ou avec la valeur spéciale `device-wdith` qui est la largeur d'écran en pixels-css à l'échelle 100%.
+La propriété `initial-scale` contrôle le niveau de zoom au chargement de la page. Les propriétés `maximum-scale`,`minimum-scale` et `user-scalable` contrôle la façon dont l'utilisateur est autorisé à zoomer.
+`user-scalable=no` est à éviter, car cela peut gêner les utilisateurs ayant des problèmes de vue.
+¤hr¤
+
+¤h2s¤Inclusion du fichier normalize.css
+En l'absence de règles css particulières, les navigateurs appliquent des styles par défaut aux éléments, styles qui peuvent parfois varier selon les navigateurs. La normalisaion du css nous assure que tous les navigateurs appliqueront une même ¤i¤couche de base de styles¤i¤. C'est ici le rôle du fichier  `normalize.css`. Les styles par défaut, plutôt que d'être retirés seront conservés, mais homogénéisés entre les navigateurs qui ne respecteraient pas certains styles ¤i¤standards¤i¤.
+¤hr¤
+
+¤h2s¤Inclusion du script Javascript fontawesome.
+Ce script permet d'utiliser les icônes fontawesome qui apparaissent à différents endroits : les étoiles de notation des hébergements, celles dans la barre de recherche ou dans les filtres. 
+¤hr¤
+
+¤h2s¤Inclusion du fichier principal de styles css.
+Le fichier `styles.css` contient toutes les règles css communes aux trois styles d'affichage desktop, tablettes et smartphones. Certaines de ces règles seront modifiées pour les affichages tablettes et smartphones en fonction des media queries comme indiquées ci-dessous.
+¤hr¤
+
+¤h2s¤Inclusion conditionnelle des fichiers css selon les requêtes media.
+Des fichiers css séparés seront utilisés pour gérer les requêtes media (media queries). Pour les `viewports` dont la largeur est inférieure à 768px ce sont les règles css définies dans le fichier `smartphones.css` qui prendront l'ascendant sur celles défnies dans `styles.css`. De même, pour les largeurs de `viewports` comprises entre 768px et 992px c'est celles du fichier `tablettes.css` qui deviendront effectives.
+¤hr¤
+
+¤h2s¤Préparation des styles.
+La charte impose :
+¤ul¤
+Trois couleurs particulières : celles-ci seront enregistrées en tant que variables personnalisées sur la `pseudo-class :root` de manière à ce qu'elles soient applicables à travers tout le document HTML. Si la charte était modifiée, cela permettrait de modifier ces couleurs à un seul endroit et non à tous les endroits où elles sont référencées dans les fichiers de styles, qui peuvent devenir très nombreux.
+Une police particulière pour l'ensemble du site : la police Raleway importée dans le code css à partir de Google Fonts  par`@import url(...)`. 
+¤ 
+La propriété `box-sizing: border-box` est appliquée à l'élément `html` puis reconduit sur tous les éléments par `box-sizing: inherit`, ce qui permet éventuellement de passer à un autre type de `box-sizing` sur une partie du document si souhaité.
+¤fc¤
+¤t html before after
+¤m box-sizing
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+¤
+
+Ainsi en spécifiant à un élément des dimensions `width` ou `height`, le navigateur va inclure le padding et la bordure dans ces dimensions. 
+
+¤hr¤

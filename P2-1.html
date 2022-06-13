@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/ns.svg">
+    <title>OpenClassrooms</title>
+    <link rel=" stylesheet" href="./css/main.css">
+    <link rel=" stylesheet" href="./css/custom.css">
+  <script src="./js/main.js" defer></script>
+  </head>
+  <body>
+    <div class="main-wrapper">
+
+      <div class="nav">
+        <div class="nw1">        <div class='hlogo'>
+<svg class="logoe" viewBox="20 67 500 210" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="159.563" y1="133.941" x2="159.563" y2="186.536" id="gradient-1" spreadMethod="pad" gradientTransform="matrix(1, 0, 0, 1, 49.789622, 86.255257)">
+      <stop offset="0" style="stop-color: rgb(169, 161, 70);"/>
+      <stop offset="1" style="stop-color: rgb(89, 73, 27);"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="201.256" y1="39.954" x2="201.256" y2="163.376" id="gradient-0" gradientTransform="matrix(1, 0, 0, 1, 47.685833, 82.047684)">
+      <stop offset="0" style="stop-color: rgb(3, 3, 31);"/>
+      <stop offset="1" style="stop-color: rgb(11, 7, 37);"/>
+    </linearGradient>
+    <linearGradient x1="-0.186" x2="-0.186" y1="0.028" y2="1.028" id="gradient-4" gradientTransform="matrix(0.998247, 0.06147, -0.057587, 1.008972, 0, 0)">
+      <stop offset="0" style="stop-color: rgb(169, 161, 70);"/>
+      <stop offset="1" style="stop-color: rgb(159, 132, 51);"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="-2.103" y1="146.523" x2="-2.103" y2="389.16" id="gradient-2" gradientTransform="matrix(0.259843, 0, 0, 0.206326, 101.014554, 61.065027)">
+      <stop offset="0" style="stop-color: rgb(141, 133, 40);"/>
+      <stop offset="0.961" style="stop-color: rgb(45, 42, 11);"/>
+      <stop offset="1" style="stop-color: rgba(36, 34, 10, 1)"/>
+    </linearGradient>
+  </defs>
+  <text style="fill: url(#gradient-0); font-family: &quot;zen_kurenaidoregular&quot;; font-size: 85px; font-weight: 700; letter-spacing: 6px; stroke: rgb(8, 2, 31); text-transform: uppercase; white-space: pre;" x="106.456" y="220.88">ERALYT</text>
+  <text style="fill: url(#gradient-1); font-family: &quot;zen_kurenaidoregular&quot;; font-size: 36px; font-weight: 700; letter-spacing: 5px; paint-order: fill; stroke: rgb(65, 63, 26); white-space: pre;" x="169.004" y="262.273">DATA</text>
+  <g transform="matrix(0.534462, 0, 0, 0.523607, 67.951286, -69.154846)">
+    <path style="fill: url(#gradient-4); stroke: rgb(65, 63, 26); paint-order: fill;" d="M 120.482 414.082 C 118.897 416.526 132.833 382.204 123.901 369.903 C 125.11 363.286 130.978 368.964 135.523 375.286 C 140.968 376.293 138.162 335.279 144.751 336.2 C 149.048 336.57 156.067 344.767 154.324 357.724 C 156.013 359.558 166.852 337.108 165.261 333.084 C 163.983 327.006 174.221 313.378 176.541 313.827 C 176.943 310.226 187.903 308.025 188.161 311.279 C 197.419 311.2 177.311 335.036 186.456 331.949 C 201.976 316.116 250.508 313.794 248.323 320.058 C 237.283 320.57 220.211 327.19 201.491 338.317 C 173.205 355.127 141.158 382.223 120.482 414.082 Z"/>
+  </g>
+  <path style="stroke: rgb(65, 63, 26); paint-order: fill; fill: url(#gradient-2);" d="M 132.539 148.83 C 141.798 128.039 167.65 107.306 184.532 102.076 C 188.928 100.715 200.701 97.34 201.964 98.916 C 200.207 100.804 203.123 103.413 192.853 105.343 C 190.181 105.845 184.933 108.217 181.148 109.299 C 170.467 112.352 173.388 117.071 182.285 116.252 C 189.007 115.633 196.799 119.975 192.307 122.976 C 182.323 129.645 156.897 122.174 162.814 126.351 C 168.411 130.302 179.704 141.621 160.054 135.53 C 148.996 129.379 132.627 149.064 132.539 148.83 Z"/>
+</svg></div>
+ <div class='nw1-content'></div></div>
+      </div>
+
+      <div class="content">
+        <div class="cw1">
+          <div class="cw2">
+            <header>
+              <h1>Développeur d'applications Javascript-React</h1>
+              <p>Projet 2 - Etape 1 : découpage du site.</p>
+            </header>
+            <div class="sections">
+<section>
+<h2 id='0'>Les principales balises HTML5</h2>
+<p>
+Une analyse rapide des maquettes <i>desktop</i> et <i>smartphone</i> du site montre un découpage évident, qui n'est pas incompatible d'une version à l'autre.
+</p>
+
+<ul>
+<li>Une partie entête qui sera le <b>header</b> incluant une barre de navigation <b> nav</b> , puis la partie recherche, les filtres et la ligne d'information qui seront tous les trois des <b> div</b> identifiés respectivement <span class='cs'>#recherche</span>, <span class='cs'>#filtres</span> et <span class='cs'>#info</span> .  J'ai choisi d'inclure la barre de navigation dans l'entête, mais on aurait très bien pu a priori la détacher.</li>
+<li>Une partie centrale qui sera le <b> main</b> dont le contenu englobe la partie <i>hébergements/populaires</i> qui sera la <b>section</b> <span class='cs'>#seloger</span> et la partie <i>activités</i> qui sera la <b>section</b> <span class='cs'>#activites</span>.</li>
+<li>Un pied de page qui sera le <b>footer</b> englobant les trois sections "A propos", "Nos hébergements" et "Assistance", </li>
+</ul>
+
+<p>
+Dans la section <b>section</b> <span class='cs'>#seloger</span> apparaît alors les deux divisions :
+</p>
+
+<ul>
+<li><b>div</b> <span class='cs'>#hebergements</span> </li>
+<li><b>div</b> <span class='cs'>#populaires</span> </li>
+</ul>
+
+<p>
+Conformément à la spécification ces deux sections doivent appraître dans la version desktop avec des largeurs respectivement dans les rapports <span class='cs'>2/3</span> et <span class='cs'>1/3</span>. On pourrait réaliser cette contrainte en imposant à ces sections les propriétés <span class='cs'>width: 66.7%</span> et <span class='cs'>width: 33.3%</span>. Dans un premier temps je pensais réaliser cette contrainte en définissant le conteneur <b>section</b> <span class='cs'>#seloger</span> comme flexbox (par défaut en ligne) avec un <span class='cs'>flex-grow: 2</span> pour la première division et un <span class='cs'>flex-grow: 1</span> pour la seconde division comme on ferait pour les grids, avant de me rendre compte qu'évidemment ceci ne fonctionne pas car cela ne contraint pas les largeurs initiales et ne fait que répartir l'espace restant sur une ligne à chacun des conteneurs dans le rapport <span class='cs'>2/3</span> et <span class='cs'>1/3</span>. 
+</p>
+
+<hr>
+</section>
+
+<section>
+<h2 id='1'>Premières observations.</h2>
+<p>
+Il est très important de faire apparaître un titre <b>h1</b>, car c'est lui que les moteurs de recherche essayent en premier lieu de repérer pour identifier le thème de la page. La hiérarchie des titres apparaît alors comme la suivante :
+</p>
+
+<ul>
+<li><b>h1</b> : "Trouver votre hébergement pour des vacances de rêve".</li>
+<li><b>h2</b> : "Hébergements à Marseille", "Les plus populaires", "Activités à Marseille".</li>
+<li><b>h3</b> : dans le <b>footer</b> : "A propos", "Nos hébergements", "Assistance".</li>
+</ul>
+
+<p>
+Les tailles de fontes pour <b>h1</b> et <b>h2</b> sont les mêmes.
+</p>
+
+<hr>
+</section>
+
+<section>
+<h2 id='2'> Passage de la version desktop à la version smartphone</h2>
+<p>
+La structure HTML précédente est valide quand on passe d'une version à l'autre, mais attention : dans la section <b>section</b> <span class='cs'>#seloger</span> les divisions  <span class='cs'>#hebergements</span> et <span class='cs'>#populaires</span> sont inversées en version smartphone et disposées non plus en ligne mais en colonne. On obtiendra ce résultat en ajoutant à la flexbox <span class='cs'>#seloger</span> la propriété : <span class='cs'>flex-flow: column-reverse</span>.
+</p>
+
+<p>
+On observe aussi que :
+</p>
+
+<ul>
+<li>La division <span class='cs'>#populaires</span> garde son fond gris mais perd ses border-radius, alors que la division <span class='cs'>#hebergements</span> perd son fond gris et donc les border-radius devenus inutiles.</li>
+<li>Le footer n'a pas de marge. On évitera donc de mettre une marge dans le corps <b>body</b> du document. Mais on appliquera plutôt des paddings identiques sur le header et le main en version desktop.</li>
+<li>L'alignement des trois divisions du <b>footer</b> change d'orientation et ces divisions n'occupent pas toute la largeur disponible en mode desktop. On les intégrera donc dans un <b>div</b> rendu flexbox avec une largeur fixe choisie à 940px et qui prendra la propriété <span class='cs'>flex-direction: column</span> en version smartphone. </li>
+<li>Dans le header, la barre de navigation occupe toute la largeur alors que les 3 éléments "recherche", "titre", "info" sont décalés. On regroupera donc ces 3 éléments.</li>
+</ul>
+
+<p>
+En version tablette, puisque la spécification n'impose rien de particulier, j'ai choisi de garder la présentation desktop en passant simplement en colonne la <b>section</b> <span class='cs'>#seloger</span> en inversant l'ordre sans changer l'apparence.
+</p>
+
+<p>
+Nous pouvons d'ors et déjà commencer à ce stade à traduire tout ce qui a été vu précédement en code et observer le comportement du site. 
+</p>
+
+</section>
+
+            </div>
+          </div>
+            <footer>
+              <p>ÉRALYT-data &copy;2022</p>
+            </footer>
+        </div>
+      </div>
+
+      <div class="topics">
+        <div class="tw1">
+          <div><span>Dans cet article</span></div>
+          <ul><li><a href='#0'>Les principales balises HTML5</a></li>
+<li><a href='#1'>Premières observations.</a></li>
+<li><a href='#2'> Passage de la version desktop à la version smartphone</a></li>
+           </ul>
+
+        </div>
+      </div>
+
+     </div>
+  </body>
+</html>
