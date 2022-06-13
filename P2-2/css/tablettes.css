@@ -1,0 +1,14 @@
+/* --------------- #seloger      -----------------------------------*/
+#seloger {
+    flex-flow: column-reverse;
+    width: 100%;
+}
+
+#hebergements, #populaires {
+    width: 100%;
+}
+
+#populaires>div:last-child {
+    /* Le conteneur des cards populaires */
+    height: 150px; /* temporaire */
+}

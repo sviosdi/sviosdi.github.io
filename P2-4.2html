@@ -22,27 +22,27 @@ h1s Projet 2 - Etape 4 : Réalisation des trois types de cards.
 
 
 ¤fc¤
-¤m #hebergements div a img p span #populaires on off
+¤m hebergements div a img p span populaires on off
 /* css - styles.css  */
 /*-------- rappel - déjà mis en place ------*/
-#hebergements,
-#populaires {
+.hebergements,
+.populaires {
     background-color: var(--bk-gray);
     border-radius: 15px;
 }
 
-#hebergements {
+.hebergements {
     width: 66.7%;
 }
 /*-------- fin rappel -----------------------*/
-#hebergements>div {
+.hebergements>div {
     /* conteneur flex des cards hébergements */
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
 }
 /*--------------- card Hébergement ------------------------------------*/
-#hebergements>div>a {
+.hebergements>div>a {
     /* chacune des cards hébergement */
     border-radius: 15px;
     /* pas plus de 3 cards par ligne */
@@ -55,36 +55,36 @@ h1s Projet 2 - Etape 4 : Réalisation des trois types de cards.
     padding: 5px 5px 10px 5px;
 }
 
-#hebergements>div>a img {
+.hebergements>div>a img {
     width: 100%;
     height: 60%;
     object-fit: cover;
     border-radius: 15px 15px 0px 0px;
 }
 
-#hebergements>div>a img+p {
+.hebergements>div>a img+p {
     /* Nom de l'hôtel */
     font-weight: 700;
     margin: 5px 10px;
 }
 
-#hebergements>div>a img+p+p {
+.hebergements>div>a img+p+p {
     /* Nuit à partir de ... */
     font-size: 14px;
     margin: 5px 10px;
 }
 
-#hebergements>div>a span {
+.hebergements>div>a span {
     /* englobe les étoiles */
     margin: 5px 10px;
 }
 
-#hebergements>div>a .fa-star,
-#populaires>div>a .fa-star {
+.hebergements>div>a .fa-star,
+.populaires>div>a .fa-star {
     font-size: 12px;
 }
 
-#hebergements>div>a:hover img+p+p {
+.hebergements>div>a:hover img+p+p {
     /* Nuit à partir de */
     color: black;
 }
@@ -97,7 +97,7 @@ h1s Projet 2 - Etape 4 : Réalisation des trois types de cards.
     color: #d9d9d9;
 }
 
-#hebergements>a {
+.hebergements>a {
     /* afficher plus */
     font-weight: 700;
     margin-left: 10px;
@@ -133,23 +133,23 @@ h1s Projet 2 - Etape 4 : Réalisation des trois types de cards.
 ¤
 
 ¤fc¤
-¤m #populaires div first last child a p
+¤m populaires div first last child a p img
 /* css - styles.css */
-/* -------------- #populaires    -------------------------*/
-#populaires {
+/* -------------- .populaires    -------------------------*/
+.populaires {
     display: flex;
     flex-direction: column;
     width: 33.3%;
 }
 
-#populaires>div:first-child {
+.populaires>div:first-child {
     /* entête les plus populaires avec l'étoile */
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-#populaires>div:last-child {
+.populaires>div:last-child {
     /* Le conteneur des cards populaires */
     display: flex;
     flex-direction: column;
@@ -157,7 +157,7 @@ h1s Projet 2 - Etape 4 : Réalisation des trois types de cards.
     flex-grow: 1;
 }
 /*---------------- card Populaires ----------------------------------*/
-#populaires>div>a {
+.populaires>div>a {
     /* chacune des cards populaires */
     display: flex;
     border-radius: 15px;
@@ -168,7 +168,7 @@ h1s Projet 2 - Etape 4 : Réalisation des trois types de cards.
     border-radius: 20px;
 }
 
-#populaires>div>a>div {
+.populaires>div>a>div {
     /* conteneur de l'ensemble de la description */
     display: flex;
     flex-direction: column;
@@ -176,20 +176,20 @@ h1s Projet 2 - Etape 4 : Réalisation des trois types de cards.
     padding: 10px 20px 8px 20px;
 }
 
-#populaires>div>a img {
+.populaires>div>a img {
     width: 40%;
     object-fit: cover;
     border-radius: 15px 0px 0px 15px;
 }
 
-#populaires>div>a>div>div>p:first-child {
+.populaires>div>a>div>div>p:first-child {
     /* Nom de l'hôtel */
     font-weight: 700;
     margin: 0px;
 
 }
 
-#populaires>div>a div>div>p:first-child+p {
+.populaires>div>a div>div>p:first-child+p {
     /* Nuit à partir de */
     color: black;
     margin: 10px 0px;

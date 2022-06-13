@@ -12,7 +12,7 @@ La trame HTML de l'entête est déjà en place. On s'intéresse maintenant à ch
     <nav>
         <img src="./images/logo/Booki@3x.png" alt="logo Booki">
         <div>
-            <a href="#hebergements">Hébergements</a>
+            <a href="#seloger">Hébergements</a>
             <a href="#activites">Activités</a>
         </div>
     </nav>
@@ -104,20 +104,20 @@ nav a:hover {
 ¤m id type class name
 /* HTML */
 /* rappel : le div "recherche" est imbriquée dans un div du header */
-    <div id="recherche">
+    <div class="recherche">
         <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
         <p>En plein centre ville ou en pleine nature</p>
         <form>
-            <div id="loc-icon"><i class="fa-solid fa-location-dot"></i></div>
-            <input type="text" id="find" name="find" autofocus value="Marseille, France">
-            <input id="find-button" type="button" value="Rechercher">
-            <button id="find-button-small"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <div class="loc-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <input type="text" class="find" name="find" autofocus value="Marseille, France">
+            <input class="find-button" type="button" value="Rechercher">
+            <button class="find-button-small"><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
     </div>
 ¤
 
 ¤fc¤
-¤m form div first child i #loc icon #find button small #recherche p 
+¤m form div first child i loc icon find button small recherche p 
 /* css */
 /* En mode desktop et tablette */
 /*---------------- recherche -------------------------------------------*/
@@ -130,7 +130,7 @@ form div:first-child i {
     font-size: 18px;
 }
 
-#loc-icon {
+.loc-icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -140,7 +140,7 @@ form div:first-child i {
     border-radius: 15px 0px 0px 15px;
 }
 
-#find {
+.find {
     border: 1px solid var(--bk-gray);
     outline: 0;
     min-width: 230px;
@@ -152,7 +152,7 @@ form div:first-child i {
 
 }
 
-#find-button {
+.find-button {
     display: flex;
     align-items: center;
     color: white;
@@ -165,26 +165,26 @@ form div:first-child i {
     background-color: var(--bk-blue);
 }
 
-#find-button-small {
+.find-button-small {
     display: none;
 }
 
-#recherche p {
+.recherche p {
     margin: 5px 0px 15px 0px;
 }
 ¤
 
 ¤fc¤
-¤m #find button small form 
+¤m find button small form 
 /* css */
 /* En mode smartphone */
 /*---------------- recherche -------------------------------------------*/
-#find-button #find-button-small {
+.find-button .find-button-small {
     border-radius: 15px 15px 15px 15px;
     font-size: 18px;
 }
 
-#find-button {
+.find-button {
     display: none;
 }
 
@@ -192,11 +192,13 @@ form {
     position: relative;
 }
 
-#find {
-    width: 100%;
+.find {
+    width: calc(100% - 100px);
+    max-width: unset;
+    min-width: unset;
 }
 
-#find-button-small {
+.find-button-small {
     position: absolute;
     left: calc(100% - 52px);
     display: block;
@@ -215,7 +217,7 @@ form {
 ¤t div p i
 ¤m id class
 /* HTML */
-    <div id="filtres">
+    <div class="filtres">
         <p>Filtres</p>
         <div><i class="fa-solid fa-money-bill-wave"></i>
             <div>Économique</div>
@@ -235,11 +237,11 @@ form {
 
 
 ¤fc¤
-¤m #filtres p div hover i
+¤m filtres p div hover i
 /* css */
 /* Pour tous les types d'affichage */
 /*--------------------- filtres ------------------------------------------------*/
-#filtres {
+.filtres {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -249,24 +251,24 @@ form {
     min-width: 300px;
 }
 
-#filtres>p {   /* le texte "filtre" */
+.filtres>p {   /* le texte "filtre" */
     margin: 5px 20px 10px 0px;
 }
 
-#filtres>div { /* Englobe tout un filtre */ 
+.filtres>div { /* Englobe tout un filtre */ 
     display: flex;
     align-items: center;
     margin: 5px 20px 5px 0px;
 }
 
-#filtres>div>div:hover { /* passage au-dessus du texte du filtre */
+.filtres>div>div:hover { /* passage au-dessus du texte du filtre */
     cursor: pointer;
     color: #777;
     border-color: #d0e0ff;
     background-position: left bottom;
 }
 
-#filtres>div>div { /* chaque texte du filtre */
+.filtres>div>div { /* chaque texte du filtre */
     border: solid 2px #d9d9d9;
     padding: 10px 15px 10px 50px;
     border-radius: 21px;
@@ -279,7 +281,7 @@ form {
     transition: all 0.5s ease;
 }
 
-#filtres>div>i {  /* l'icone de chaque filtre */
+.filtres>div>i {  /* l'icone de chaque filtre */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -302,31 +304,31 @@ form {
 ¤t div span
 ¤m id
 /* HTML */
-<div id="info">
+<div class="info">
     <span>&#8505;</span>
-    <p>Plus de&nbsp;<span id="nb-logements">500</span>&nbsp;logements sont disponibles
+    <p>Plus de&nbsp;<span class="nb-logements">500</span>&nbsp;logements sont disponibles
         dans cette ville.</p>
 </div>
 ¤
 
 ¤fc¤
-¤m #info p span first last child
+¤m info p span first last child
 /* css pour tous les types d'affichage */
 /*------ partie info des filtres -------------*/
-#info {
+.info {
     display: flex;
     align-items: baseline;
 }
 
-#info p {
+.info p {
     margin: 0;
 }
 
-#info>span:last-child {
+.info>span:last-child {
     display: inline;
 }
 
-#info>span:first-child {
+.info>span:first-child {
     display: inline-flex;
     align-items: center;
     justify-content: center;

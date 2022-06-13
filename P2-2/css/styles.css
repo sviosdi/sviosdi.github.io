@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;700&display=swap');
+
+:root {
+    --bk-blue: #0065fc;
+    --bk-light-blue: #deebff;
+    --bk-gray: #f2f2f2;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+h1,
+h2 {
+    font-size: 22px;
+}
+
+h3 {
+    font-size: 19px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/*---- positionnement des principaux éléments de la trame ---------*/
+header, main {
+    margin: 0px 40px;
+}
+
+#hebergements, #populaires {
+    padding: 25px 40px 50px 40px;
+}
+
+main {
+    margin-top: 30px;
+}
+
+#activites {
+    margin-top: 40px;
+}
+
+footer {
+    margin-top: 40px;
+}
+
+/*---------------- #header  ---------------------------------------*/
+header {
+    background-color: darkgoldenrod; /* provisoire */
+}
+
+nav+div {
+    /* englobe "recherche", "filtre", "info" */
+    border:dotted 1px black;    /* provisoire */
+}
+
+/* --------------- #seloger ---------------------------------------*/
+#seloger {
+    display: flex;
+    gap: 40px;
+}
+
+#hebergements,
+#populaires {
+    background-color: var(--bk-gray);
+    border-radius: 15px;
+}
+
+/* -------------- #hebergements  -----------------------------------*/
+#hebergements {
+    width: 66.7%;
+}
+#hebergements>div {
+    /* conteneur flex des cards hébergements */
+    min-height: 400px;          /* provisoire */
+    border:dotted 1px black;    /* provisoire */
+
+}
+
+#hebergements>a {
+    /* afficher plus */
+    display: inline-block;
+    font-weight: 700;
+    margin-left: 10px;
+    margin-top: 40px;
+    font-size: 18px;
+}
+
+
+/* -------------- #populaires    -----------------------------------*/
+#populaires {
+    display: flex;
+    flex-direction: column;
+    width: 33.3%;  
+}
+
+#populaires>div:first-child {
+    /* entête les plus populaires avec l'étoile */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#populaires>div:last-child {
+    /* Le conteneur des cards populaires */
+    border:dotted 1px black;  /* provisoire */
+    background-color: aquamarine;    /* provisoire */
+    flex-grow: 1;
+    
+}
+
+/* -------------- #activites     -----------------------------------*/
+#activites {
+    border:solid 1px black;
+}
+#activites>div {
+    /* Le conteneur des cards activites */
+    min-height: 400px;         /* provisoire */
+    border:dotted 1px black;  /* provisoire */
+}
+
+/* -------------- #footer        -----------------------------------*/
+footer {
+    background-color: var(--bk-gray);
+    padding: 30px 40px;
+}
+
+footer>div { /* englobe les trois sections */
+    display: flex;
+    justify-content: space-between;
+    max-width: 940px;   /* limite la largeur */ 
+}
+
+footer>div>section {
+    min-height:150px;            /* provisoire */
+    border:dotted 1px black;   /* provisoire */
+}
