@@ -5,7 +5,7 @@ h1s Projet 2 - Etape 4 : Réalisation des trois types de cards.
 ¤h2s¤Card "Hébergements à Marseille<br>mode desktop
 ¤fc¤
 ¤t a img p span i 
-¤m href class
+¤m href class src alt
 /* HTML */
 <a href="#">
     <img src="./images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
@@ -22,7 +22,7 @@ h1s Projet 2 - Etape 4 : Réalisation des trois types de cards.
 
 
 ¤fc¤
-¤m hebergements div a img p span populaires on off
+¤m hebergements div a img p span populaires on off fa star hover
 /* css - styles.css  */
 /*-------- rappel - déjà mis en place ------*/
 .hebergements,
@@ -214,7 +214,7 @@ h1s Projet 2 - Etape 4 : Réalisation des trois types de cards.
 ¤
 
 ¤fc¤
-¤m #activites div a nth child img 
+¤m #activites div a nth child img  p
 /* css - styles.css */
 /* -------------- #activites     --------------------------*/
 
@@ -272,7 +272,7 @@ h1s Projet 2 - Etape 4 : Réalisation des trois types de cards.
 ¤h2s¤Card "Activités à Marseille"<br>mode tablette et smartphone
 ¤u¤En mode smartphone ou tablette:¤u¤ affichage des cards sur une seule colonne, les cards s'affichent donc toutes l'une en dessous de l'autre avec une hauteur fixée à 180px en mode smartphone et 250px en mode tablette.
 ¤fc¤
-¤m
+¤m #activites div a nth child
 /* smartphones.css & tablettes.css */
 #activites>div {
     /* conteneur flex des cards activités */

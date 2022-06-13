@@ -19,7 +19,7 @@ La trame HTML de l'entête est déjà en place. On s'intéresse maintenant à ch
 ¤
 
 ¤fc¤
-¤m main header nav img a hover
+¤m main header nav img a hover h1
 /* css */
 /* en mode desktop: styles.css */
 /* -------   ------ navigation ----------------------------------------*/
