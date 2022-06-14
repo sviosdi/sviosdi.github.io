@@ -4,6 +4,8 @@ h1s Projet 2 - Etape 0 : initialisation du site, préparation des styles.
 ¤h2s¤ Le code
 
 ¤fc¤
+¤t head meta title link script 
+¤m charset name content rel href media 
 /* HTML */
 <!DOCTYPE html>
 <html lang="fr">
@@ -12,6 +14,7 @@ h1s Projet 2 - Etape 0 : initialisation du site, préparation des styles.
     <meta charset="utf-8">
     <title>Booki Vacances</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/ns.png">
     <link rel="stylesheet" href="./css/normalize.css">
     <script src="https://kit.fontawesome.com/142b14e2d0.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/styles.css">
