@@ -36,6 +36,10 @@ a {
     color: black;
 }
 
+a:hover {
+	color: var(--bk-blue);
+}
+
 /*---- positionnement des principaux éléments de la trame ---------*/
 header,
 main {
