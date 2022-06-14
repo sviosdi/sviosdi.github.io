@@ -1,0 +1,35 @@
+/* --------------- #seloger      -----------------------------------*/
+#seloger {
+    flex-flow: column-reverse;
+    width: 100%;
+}
+
+.hebergements,
+.populaires {
+    width: 100%;
+}
+
+/* -------------- .populaires     -----------------------------------*/
+.populaires>div>a {
+    height: 130px;
+}
+
+/* -------------- #activites     -----------------------------------*/
+#activites>div {
+    /* conteneur flex des cards activités */
+    flex-direction: row;
+    height: unset;
+    gap: 30px;
+    width: 100%;
+}
+
+#activites>div>a {
+    /* chacune des cards activités */
+    min-width: 100%;
+    flex-grow: 1;
+    height: 250px;
+}
+
+#activites>div>a:nth-child(3n+1) {
+    height: 250px;
+}

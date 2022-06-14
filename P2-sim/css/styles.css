@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;700&display=swap');
+
+:root {
+    --bk-blue: #0065fc;
+    --bk-light-blue: #deebff;
+    --bk-gray: #f2f2f2;
+}
+
+html {
+    box-sizing: border-box;
+    scrollbar-width: none;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+body::-webkit-scrollbar {
+	display: none;
+}
+
+
+	
+
+h1,
+h2 {
+    font-size: 22px;
+}
+
+h3 {
+    font-size: 19px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: var(--bk-blue);
+}
+
+/*---- positionnement des principaux éléments de la trame ---------*/
+header,
+main {
+    margin: 0px 40px;
+}
+
+.hebergements,
+.populaires {
+    padding: 25px 40px 50px 40px;
+}
+
+main {
+    margin-top: 30px;
+}
+
+#activites {
+    margin-top: 40px;
+}
+
+footer {
+    margin-top: 40px;
+}
+
+/* --------------- #seloger -----------------------------*/
+#seloger {
+    display: flex;
+    gap: 40px;
+}
+
+.hebergements,
+.populaires {
+    background-color: var(--bk-gray);
+    border-radius: 15px;
+}
+
+/* -------------- .hebergements  -------------------------*/
+.hebergements {
+    width: 66.7%;
+}
+
+.hebergements>div {
+    /* conteneur flex des cards hébergements */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.hebergements>a {
+    /* afficher plus */
+    display: inline-block;
+    font-weight: 700;
+    margin-left: 10px;
+    margin-top: 40px;
+    font-size: 18px;
+}
+
+/*--------------- card Hébergement ------------------------------------*/
+.hebergements>div>a {
+    /* chacune des cards hébergement */
+    /* pas plus de 3 cards par ligne */
+    width: max(220px, 25%);
+    height: 190px;
+    flex-grow: 1;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 5px 5px #ddd;
+    padding: 5px 5px 10px 5px;
+}
+
+.hebergements>div>a img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.hebergements>div>a img+p {
+    /* Nom de l'hôtel */
+    font-weight: 700;
+    margin: 5px 10px;
+}
+
+.hebergements>div>a img+p+p {
+    /* Nuit à partir de ... */
+    font-size: 14px;
+    margin: 5px 10px;
+}
+
+.hebergements>div>a span {
+    /* englobe les étoiles */
+    margin: 5px 10px;
+}
+
+.hebergements>div>a .fa-star,
+.populaires>div>a .fa-star {
+    font-size: 12px;
+}
+
+.hebergements>div>a:hover img+p+p {
+    /* Nuit à partir de */
+    color: black;
+}
+
+.on {
+    color: var(--bk-blue);
+}
+
+.off {
+    color: #d9d9d9;
+}
+
+/* -------------- .populaires    -------------------------*/
+.populaires {
+    display: flex;
+    flex-direction: column;
+    width: 33.3%;
+}
+
+.populaires>div:first-child {
+    /* entête les plus populaires avec l'étoile */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.populaires>div:last-child {
+    /* Le conteneur des cards populaires */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex-grow: 1;
+}
+
+/*---------------- card Populaires ----------------------------------*/
+.populaires>div>a {
+    /* chacune des cards populaires */
+    display: flex;
+    border-radius: 15px;
+    min-height: 145px;
+    padding: 5px;
+    background-color: white;
+    box-shadow: 0px 5px 5px #ddd;
+    border-radius: 20px;
+}
+
+@media all and (min-width: 992px) and (max-width: 1320px) {
+    .populaires>div>a {
+        min-height: 190px;
+    }
+}
+
+@media all and (min-width: 992px) and (max-width: 1320px) {
+    .populaires>div>a {
+        min-height: 170px;
+    }
+}
+
+.populaires>div>a>div {
+    /* conteneur de l'ensemble de la description */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 20px 8px 20px;
+}
+
+.populaires>div>a img {
+    width: 40%;
+    object-fit: cover;
+    border-radius: 15px 0px 0px 15px;
+}
+
+.populaires>div>a>div>div>p:first-child {
+    /* Nom de l'hôtel */
+    font-weight: 700;
+    margin: 0px;
+
+}
+
+.populaires>div>a div>div>p:first-child+p {
+    /* Nuit à partir de */
+    color: black;
+    margin: 10px 0px;
+}
+
+/* -------------- #activites     --------------------------*/
+
+#activites>div {
+    /* conteneur flex des cards activités */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: calc(100% + 30px);
+    height: 450px;
+}
+
+#activites>div>a {
+    /* chacune des cards activités */
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    height: 220px;
+    width: calc(25% - 30px);
+    box-shadow: 3px 5px 5px #ddd;
+}
+
+#activites>div>a:nth-child(3n+1) {
+    /* chacune des 2 deux cards hautes */
+    height: 450px;
+}
+
+#activites>div>a img {
+    height: 40px;
+    object-fit: cover;
+    border-radius: 15px 15px 0px 0px;
+    flex-grow: 1;
+}
+
+#activites>div>a p {
+    /* le texte de légende */
+    font-weight: 700;
+    margin: 15px 15px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* -------------- footer ----------------------------------*/
+footer {
+    background-color: var(--bk-gray);
+    padding: 30px 40px;
+}
+
+footer>div {
+    /* englobe les trois sections */
+    display: flex;
+    justify-content: space-between;
+    /* limite la largeur */
+    max-width: 940px;
+}
+
+footer>div>section {
+    display: flex;
+    flex-direction: column;
+}
+
+footer a {
+    line-height: 30px;
+}
+
+/*-----------------------------------------------------------*/
+/*                      HEADER                               */
+/*-----------------------------------------------------------*/
+
+/* ---------------- navigation ------------------------------*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+nav img {
+    width: 114px;
+}
+
+nav a {
+    display: inline-block;
+    font-weight: 700;
+    padding: 50px 25px 50px 25px;
+    margin-right: 0;
+    border-top: solid 3px transparent;
+}
+
+nav a:hover {
+    border-top: solid 3px var(--bk-blue);
+}
+
+header h1 {
+    margin: 8px 0px;
+}
+
+/*---------------- recherche -------------------------------------------*/
+form {
+    display: flex;
+    height: 52px;
+}
+
+form div:first-child i {
+    font-size: 18px;
+}
+
+.loc-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    background-color: var(--bk-gray);
+    border-color: var(--bk-blue);
+    border-radius: 15px 0px 0px 15px;
+}
+
+.find {
+    border: 1px solid var(--bk-gray);
+    outline: 0;
+    min-width: 230px;
+    max-width: 390px;
+    width: 40%;
+    font-weight: 700;
+    padding: 0px 20px;
+    font-size: 18px;
+
+}
+
+.find-button {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: 700;
+    padding: 0px 15px;
+    border-radius: 0px 15px 15px 0px;
+    cursor: pointer;
+    font-size: 18px;
+    border-color: var(--bk-blue);
+    background-color: var(--bk-blue);
+}
+
+.find-button-small {
+    display: none;
+}
+
+.recherche p {
+    margin: 5px 0px 15px 0px;
+}
+
+
+/*--------------------- filtres ------------------------------------------------*/
+.filtres {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 30px 0px;
+    font-size: 18px;
+    font-weight: 700;
+    min-width: 300px;
+}
+
+.filtres>p {
+    /* le texte "filtre" */
+    margin: 5px 20px 10px 0px;
+}
+
+.filtres>div {
+    /* Englobe tout un filtre */
+    display: flex;
+    align-items: center;
+    margin: 5px 20px 5px 0px;
+}
+
+.filtres>div>div:hover {
+    /* passage au-dessus du texte du filtre */
+    cursor: pointer;
+    color: .777;
+    border-color: #d0e0ff;
+    background-position: left bottom;
+}
+
+.filtres>div>div {
+    /* chaque texte du filtre */
+    border: solid 2px #d9d9d9;
+    padding: 10px 15px 10px 50px;
+    border-radius: 21px;
+    margin-left: -44px;
+    z-index: 0;
+    height: 46px;
+    background: linear-gradient(to left, white 50%, var(--bk-light-blue) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 0.5s ease;
+}
+
+.filtres>div>i {
+    /* l'icone de chaque filtre */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bk-light-blue);
+    width: 46px;
+    height: 46px;
+    border-radius: 23px;
+    color: var(--bk-blue);
+    z-index: 1;
+}
+
+
+/*------ partie info des filtres -------------*/
+.info {
+    display: flex;
+    align-items: baseline;
+}
+
+.info p {
+    margin: 0;
+}
+
+.info>span:last-child {
+    display: inline;
+}
+
+.info>span:first-child {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 24px;
+    width: 24px;
+    min-width: 24px;
+    border: solid 1px #dcdcdc;
+    border-radius: 12px;
+    margin-right: 10px;
+    margin-left: 0px;
+    padding-top: 2px;
+    color: var(--bk-blue);
+}
+

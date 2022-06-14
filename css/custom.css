@@ -4,10 +4,38 @@
 
 .p2-1-dec {
   width: 500px;
-  }
+}
 
 
 .p2-logo {
-	margin:50px 150px;
+  width: 447px;
 
 }
+
+#mobile-frame {
+ 
+  transform: scale(0.7) translate(120px, -150px);
+  margin: 0px auto;
+
+}
+
+#mobile-frame>div {
+  position: absolute;
+  top: 120px;
+  left: 29px;
+  width: 390px;
+  height: 750px;
+  background-color: white;
+  border-radius: 0px 0px 40px 40px;
+}
+
+.frame-view {
+  width: 390px;
+  height: 750px;
+  overflow: hidden;
+  border-radius: 0px 0px 40px 40px;
+  outline: 0;
+  border: 0;
+}
+
+
