@@ -393,9 +393,13 @@ form div:first-child i {
 
 .filtres>div {
     /* Englobe tout un filtre */
+    position: relative;
     display: flex;
     align-items: center;
     margin: 5px 20px 5px 0px;
+    /* permet l'ellipsis du texte sur écran très étroit sans faire blocage de largeur 
+       qui ferait apparaître le scroll horizontal */
+    max-width: 100%; 
 }
 
 .filtres>div>div:hover {
@@ -411,17 +415,21 @@ form div:first-child i {
     border: solid 2px #d9d9d9;
     padding: 10px 15px 10px 50px;
     border-radius: 21px;
-    margin-left: -44px;
     z-index: 0;
     height: 46px;
+    width: 100%;
     background: linear-gradient(to left, white 50%, var(--bk-light-blue) 50%);
     background-size: 200% 100%;
     background-position: right bottom;
     transition: all 0.5s ease;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .filtres>div>i {
     /* l'icone de chaque filtre */
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
