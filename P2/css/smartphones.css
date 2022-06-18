@@ -25,13 +25,23 @@ header>div {
     padding-right: 20px;
 }
 
-.populaire {
-    min-width: 360px;
-}
 /* on limite la hauteur des cards à 130px */
 .populaires>div>a {
     height: 130px;
 }
+
+@media all and (max-width: 246px) {
+    .populaires>div>a {
+        height: 220px;
+    }
+}
+
+@media all and (min-width: 246px) and (max-width: 360px) {
+    .populaires>div>a {
+        height: 190px;
+    }
+}
+
 
 #activites {
     margin-top: 0px;
