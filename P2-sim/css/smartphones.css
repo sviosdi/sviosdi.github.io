@@ -34,13 +34,23 @@ header>div {
     .populaires>div>a {
         height: 220px;
     }
+
+    .hebergements>div>a {
+        height: 250px;
+    }
 }
 
 @media all and (min-width: 246px) and (max-width: 360px) {
     .populaires>div>a {
         height: 190px;
     }
+    
+     .hebergements>div>a {
+        height: 230px;
+    }
 }
+
+
 
 
 #activites {
