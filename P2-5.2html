@@ -2,7 +2,7 @@ title OpenClassrooms
 h1 Développeur d'applications Javascript-React
 h1s Projet 2 - Etape 5 : Pied de page 
 
-¤h2s¤Pied de page<br>mode desktop
+¤h2s¤Pied de page
 
 
 ¤fc¤
@@ -78,3 +78,15 @@ footer>div {
     padding-bottom: 35px;
 }
 ¤
+
+¤hr¤
+
+¤h2s¤ Remerciements
+
+¤w1¤Je vous remercie pour votre écoute. Je suis, je suis à votre disposition pour répondre à vos questions¤w1¤
+
+
+
+
+
+¤hr¤
