@@ -405,7 +405,7 @@ form div:first-child i {
 .filtres>div>div:hover {
     /* passage au-dessus du texte du filtre */
     cursor: pointer;
-    color: .777;
+    color: #777;
     border-color: #d0e0ff;
     background-position: left bottom;
 }
