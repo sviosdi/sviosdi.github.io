@@ -1,4 +1,4 @@
-title OpenClassrooms
+title Projet 2
 h1 Développeur d'applications Javascript-React
 h1s Projet 2 - Etape 0 : initialisation du site, préparation des styles.
 ¤h2s¤ Le code
@@ -58,14 +58,14 @@ d'avoir une vue globale entière de la page.
 de permettre de manipuler ensuite la vue par zoom avant et par translations (scroll-défilement).
 ¤
 Ce comportement par défaut des smartphones est fait pour permettre aux nombreuses pages non optimisées pour les mobiles d'avoir un aspect général de l'affichage initial de la page plus acceptable (plutôt qu'un morceau de page coupée en largeur par exemple).
-Cependant ce mécanisme vient contrarier l'efficacité de l'affichage des pages de sites optimisés pour les mobiles grâce au les `media queries` : si par exemple le `viewport virtuel` est 980px (c'est surtout sa largeur qui importe), des `media queries` qui déclenchent à 640px ou 480px ou moins ne seraient jamais utilisées. En effet, par un déclenchement à 640px, le `css` commande au navigateur par sa `media query` d'effectuer l'affichage d'une certaine façon si son `viewport` devient inférieur à 640px, ce que le navigateur ignorera, car il considérera son `viewport virtuel` toujours à 980px.
+Cependant ce mécanisme vient contrarier l'efficacité de l'affichage des pages de sites optimisés pour les mobiles grâce aux `media queries` : si par exemple le `viewport virtuel` est 980px (c'est surtout sa largeur qui importe), des `media queries` qui déclenchent à 640px ou 480px ou moins ne seraient jamais utilisées. En effet, par un déclenchement à 640px, le `css` commande au navigateur par sa `media query` d'effectuer l'affichage d'une certaine façon si son `viewport` devient inférieur à 640px, ce que le navigateur ignorera, car il considérera son `viewport virtuel` toujours à 980px.
 Généralement, pour permettre d'optimiser un site pour mobile on introduira la balise `meta` suivante :
 ¤fc¤
 ¤t name content
 ¤m meta
 <meta name="viewport" content="width=device-width, initial-scale=1">
 ¤
-La propriété `width` peut être exprimée en nombre de pixels-css : `width=600` ou avec la valeur spéciale `device-wdith` qui est la largeur d'écran en pixels-css à l'échelle 100%.
+La propriété `width` peut être exprimée en nombre de pixels-css : `width=600` ou avec la valeur spéciale `device-width` qui est la largeur d'écran en pixels-css à l'échelle 100%.
 La propriété `initial-scale` contrôle le niveau de zoom au chargement de la page. Les propriétés `maximum-scale`,`minimum-scale` et `user-scalable` contrôle la façon dont l'utilisateur est autorisé à zoomer.
 `user-scalable=no` est à éviter, car cela peut gêner les utilisateurs ayant des problèmes de vue.
 ¤hr¤
