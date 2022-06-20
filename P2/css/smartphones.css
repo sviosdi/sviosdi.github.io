@@ -158,5 +158,8 @@ form {
 }
 
 
-
-
+/*------------ filtres -------------------------------------------*/
+.filtres>p {
+   /* pour permettre de n'avoir que le texte "Filtres" sur la première ligne */
+	width: 100%;
+}
