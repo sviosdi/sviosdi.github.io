@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Shrikhand&display=swap');
+
+
+:root {
+  --om-primaire: #9356dc;
+  --om-secondaire: #ff79da;
+  --om-tertiaire: #99e2d0;
+  --om-light-gray: #f6f6f6;
+  --om-gray: #eaeaea;
+  --om-dark: #353535;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 113px;
+}
+
+header>img {
+  padding-top: 5px;
+  width: 160px;
+  flex-grow: 1;
+}
+
+.localisation {
+  display: flex;
+  background-color: var(--om-gray);
+  width: 100%;
+  height: 50px;
+  box-shadow: inset 0 5px 4px -2px #ccc;
+}
+
+.localisation>div {
+  /* texte de la localisation */
+  margin: auto;
+  /* largeur égale à celle de l'image pour un 
+     alignement de l'icône avec le début du logo */
+  width: 150px;
+  color: #353535;
+  font-weight: 500;
+  font-size: 15.5px;
+ /* letter-spacing: 0.015rem;*/
+}
+
+.localisation i {
+  /* icône localisation */
+  margin-right: 15px;
+}
+
+.presentation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--om-light-gray);
+  padding: 40px 25px 60px 25px;
+}
+
+.presentation h1 {
+  text-align: center;
+  padding: 0px 15px 10px 15px;
+}
+
+.presentation div {
+  /* Découvrez des ... */
+  text-align: center;
+  color: #676767;
+  padding-bottom: 30px;
+  font-size: 17.5px;
+}
+
+.presentation a {
+  /* le bouton "explorer nos restaurants" */
+  display: flex;
+  background: linear-gradient(var(--om-secondaire), var(--om-primaire));
+  height: 50px;
+  border-radius: 23px;
+  color: white;
+  vertical-align: middle;
+  padding: 0px 20px;
+  font-size: 16px;
+  font-weight: 700;
+  box-shadow: 0px 6px 6px #bbb;
+  color: #fafafa;
+}
+
+.presentation a:hover {
+  background: linear-gradient(#ff9bfc, #b578fe);
+  box-shadow: 0px 6px 6px #ddd;
+}
+
+.presentation a:active {
+  background: linear-gradient(#dd57b8, #7134ba);
+  box-shadow: 0px 6px 6px #999;
+}
+
+.presentation>a>span {
+  margin: auto;
+}
+
+.fonctionnement {
+  padding: 50px 20px 40px 20px;
+}
+
+.fonctionnement article {
+  position: relative;
+  display: flex;
+  height: 70px;
+  background-color: var(--om-light-gray);
+  box-shadow: 0px 3px 10px #ddd;
+  border-radius: 20px;
+  margin: 30px 10px;
+}
+
+.fonctionnement article span {
+  /* le numéro de l'étape */
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-radius: 11px;
+  background-color: var(--om-primaire);
+  color: white;
+  padding-left: 7px;
+  padding-top: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  top: 23px;
+  left: -11px;
+}
+
+.fonctionnement article>div {
+  /* chaque item : Choisissez.., Composez..., Dégustez... */
+  margin: auto 30px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #353535;
+}
+
+.fonctionnement article:hover i {
+  color: var(--om-primaire);
+}
+
+.fonctionnement article>div i {
+  /* l'icône de chaque item */
+  font-size: 18px;
+  margin-right: 25px;
+  color: #858585;
+}
+
+#restaurants {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: var(--om-light-gray);
+  padding: 40px 20px 60px 20px;
+}
+
+#restaurants a {
+  /* chacune des cards restaurant */
+  height: 250px;
+  width: 100%;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px #e3e3e3;
+}
+
+#restaurants a img {
+  height: 170px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15px 15px 0px 0px;
+
+}
+
+#restaurants a>div {
+  /* l'ensemble de la description + coeur */
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  position: relative;
+}
+
+#restaurants a>div>div:first-child {
+  /* la description de chaque carte restaurant */
+  color: black;
+  padding: 10px 12px;
+}
+
+#restaurants h3 {
+  /* nom du restaurant sur la card */
+  font-size: 17.5px;
+  color: #1a1a1a;
+}
+
+#restaurants span {
+  /* nom du menu */
+  font-size: 16.5px;
+  color: #555;
+  line-height: 30px;
+}
+
+.coeur {
+  /* englobe les deux coeurs, creux et plein */
+  position: relative;
+}
+
+.coeur i {
+  /* les icônes coeur */
+  font-size: 24px;
+  margin-top: 18px;
+  margin-right: 24px;
+}
+
+/* Le coeur creux est au-dessus du coeur plein. Le plein est caché par le fond blanc du creux. */
+.coeur i:first-child {
+  /* le coeur creux */
+  position: absolute;
+  background-color: white;
+  color: #888;
+  transition: all 0.5s ease;
+}
+
+/* hover sur coeur creux: le creux devient transparent pour laisser apparaître le plein. */
+.coeur i:first-child:hover {
+  background-color: transparent;
+  color: transparent;
+}
+
+/* Le background dégradé du coeur plein est clipé sur le texte, c-à-d qu'il épouse la forme de la partie texte qui est ici le coeur plein.  
+  Puis en rendant le texte (coeur plein) transparent, il n'apparait plus alors que le fond dégradé en forme de coeur. */
+.coeur i:last-child {
+  /* le coeur plein */
+  background: linear-gradient(var(--om-secondaire), var(--om-primaire));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--om-dark);
+  color: white;
+  padding: 25px;
+}
+
+footer>h3 {
+  font-family: 'Shrikhand', cursive;
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+
+footer a {
+  color: white;
+  line-height: 26px;
+}
+
+footer i {
+  width: 14px;
+  font-size: 14px;
+  margin-right: 10px;
+}

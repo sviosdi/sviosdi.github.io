@@ -1,0 +1,213 @@
+/*---------------------------------------------------------------------------------*/
+/*                      commun aux pages restaurants                               */
+/*---------------------------------------------------------------------------------*/
+
+main {
+    background-color: var(--om-light-gray);
+}
+
+main img:first-child {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+
+}
+
+.restos {
+    background-color: inherit;
+    border-radius: 40px 40px 0px 0px;
+    transform: translateY(-60px);
+}
+
+.restos>div:first-child {
+    /* englobe le nom du plat + coeur */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px 30px 20px;
+    background-color: transparent;
+}
+
+.restos>div:first-child h1 {
+    font-family: 'Shrikhand', cursive;
+    font-weight: normal;
+    font-size: 28px;
+}
+
+.restos>div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+}
+
+.restos section>h2 {
+    /* les titres : Entrées, Plats, Desserts */
+    display: block;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: normal;
+    color: #444;
+}
+
+.restos section>h2::after {
+    position: absolute;
+    display: block;
+    content: " ";
+    background-color: #99e2d0;
+    width: 40px;
+    height: 3px;
+    margin-top: 5px;
+}
+
+.coeur {
+    background-color: var(--om-light-gray);
+}
+
+.restos section {
+    /* englobe les différentes propositions de plats */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0px 15px 40px 15px;
+
+}
+
+/*---------------------------------------------------------------------------------*/
+/*              partie article = proposition de plat [entrée, dessert]             */
+/*---------------------------------------------------------------------------------*/
+
+article {
+    /* une proposition de plat */
+    display: flex;   
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0px 4px 4px #e3e3e3;
+    height: 66px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.desc {
+    /* la description du plat mais pas le prix */
+    width: 100%;
+    padding:10px;
+}
+
+.desc>h3 {
+    /* le nom du plat proposé */
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.desc>div {
+    /*  le complément de description */
+    font-size: 14px;
+    line-height: 25px;
+    color: #555;
+}
+.desc, .desc>h3, .desc>div {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.mov>div:first-child {
+    /* le prix */
+    padding-top: 33px;
+    font-weight: 700;
+    color: #444;
+    padding-right: 20px;
+}
+
+/*---------------------------------------------------------------------------------*/
+/*                      animation selection plat                                   */
+/*---------------------------------------------------------------------------------*/
+
+.mov {
+    display: flex;
+}
+
+.mov>div:last-child {
+    /* le div englobant le div .rel-mov  */
+    background-color: #8fdeca;
+    width: 0px;
+    height: 100%;
+    transition: width 0.5s ease;   
+}
+
+article:hover .mov>div:last-child {
+    width: 70px;
+
+}
+
+article:hover .rel-mov>i {
+    transform: rotate(360deg);
+}
+
+.rel-mov {
+    display: flex;
+    height: 100%;
+    width: 70px;
+}
+
+.rel-mov>i {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    margin: auto;
+    transform: rotate(0deg);
+    transition: transform 0.8s ease; 
+}
+
+/*---------------------------------------------------------------------------------*/
+/*                      animation de l'apparitions des plats                       */
+/*---------------------------------------------------------------------------------*/
+
+section>article:nth-of-type(1) {
+    animation: plats 500ms 100ms forwards;
+}
+
+section>article:nth-of-type(2) {
+    animation: plats 500ms 150ms forwards;
+}
+
+section>article:nth-of-type(3) {
+    animation: plats 500ms 300ms forwards;
+}
+
+section>article:nth-of-type(4) {
+    animation: plats 500ms 450ms forwards;
+}
+
+
+@keyframes plats {
+    from {
+        opacity: 20%;
+        transform: translateY(15px);
+    }
+
+    75% {
+        opacity: 65%;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/*---------------------------------------------------------------------------------*/
+/*                      bouton pour passer commande                                */
+/*---------------------------------------------------------------------------------*/
+
+.main-content>div:last-child {
+    /* englobe le bouton pour passer commande */
+    display: flex;
+    width: 100%;
+}
+
+.cmd {
+    /* pour modifier le bouton */
+    padding: 0px 50px;
+    margin: auto;
+}
+

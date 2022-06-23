@@ -1,0 +1,112 @@
+.main-content {
+    max-width: 1440px;
+    margin: auto;
+}
+
+
+@media all and (min-width: 600px) {
+    /* dispostion sur la page d'accueil */
+    .restaurants a {
+        width: 48%;
+    }
+
+    .fonctionnement {
+        padding: 40px 25%;
+    }
+
+    .fonctionnement>h2 {
+        text-align: center;
+    }
+
+    .restaurants>h2 {
+        text-align: center;
+    }
+
+    .fonctionnement>h2::before, .fonctionnement>h2::after,
+    .restaurants>h2::before, .restaurants>h2::after {
+        display: inline-block;
+        content: ' ';
+        width: 50px;
+        height: 10px;
+        border-top: double 4px #888;
+    
+    }
+
+    .fonctionnement>h2::before,
+    .restaurants>h2::before {
+        margin-right:15px;
+    }
+
+    .fonctionnement>h2::after,
+    .restaurants>h2::after {
+        margin-left:15px;
+    }
+
+    .restaurants>h2 {
+        margin-bottom: 40px;
+    }
+    /* dispostion sur toutes les pages */
+    footer>div {
+        width: fit-content;
+        margin: auto;
+    }
+}
+
+
+@media all and (min-width: 1024px) {
+    /* dispostion sur la page d'accueil */
+    .fonctionnement>div {
+        display: flex;
+        gap: 30px;
+    }
+
+    .fonctionnement article {
+        width: 30%;
+        flex-grow: 1;
+    }
+
+    .fonctionnement {
+        padding: 40px 5%;
+    }
+
+    .restaurants a {
+        height: 350px;
+    }
+
+}
+
+@media all and (min-width: 768px)and (max-width: 1280px) {
+    article>.desc {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* pour compenser la largeur du prix */
+        padding-left: 66px;
+    }
+
+    .restos h2 {
+        text-align: center;
+    }
+
+    .restos h2::after {
+        left: calc(50% - 20px);
+    }
+
+    .restos>div:first-child h1 {
+        width: calc(100% - 24px);
+        padding-left: 24px;
+        text-align: center;
+    }
+}
+
+
+@media all and (min-width: 1280px) {
+    /* disposition des plats des pages des restaurants */
+    .main-content>div:nth-child(2) {
+        flex-direction: row;
+    }
+
+    .main-content>div:nth-child(2)>section {
+        width: 33.3%;
+    }
+}
