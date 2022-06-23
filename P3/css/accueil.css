@@ -174,10 +174,17 @@ header a {
   line-height: 30px;
 }
 
+.coeur {
+  width: 24px;
+  height: 24px;
+  margin-right: 24px;
+  margin-top: 18px;
+}
+
 .coeur i {
   /* les icônes coeurs */
-  margin-top: 18px;
-  margin-right: 24px;
+ 
+  
 }
 
 .nouveau {
