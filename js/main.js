@@ -49,12 +49,7 @@ window.addEventListener('scroll', () => {
 
 const nav = document.querySelector('.nw1-content');
 const navProjItems = [
-    { name: "0: Initialisation ", link: "/P2-0.html", childs: null },
-    { name: "1: Découpage grossier", link: "/P2-1.html", childs: null },
-    { name: "2: Trame globale", link: "/P2-2.html", childs: null },
-    { name: "3: Réalisation de l'entête", link: "/P2-3.html", childs: null },
-    { name: "4: Réalisation des cards", link: "/P2-4.html", childs: null },
-    { name: "5: Footer et finalisations", link: "/P2-5.html", childs: null }
+   
 ];
 
 
@@ -79,18 +74,11 @@ function addSeparator(name) {
 }
 
 function createMainMenu() {
-    addSeparator("Technologies WEB");
-    createNavigation(navWebItems);
-    addSeparator("Programmation");
-    createNavigation(navProgItems);
-    addSeparator("Sur GitHub");
-    createNavigation(navGithub);
-    addSeparator("Divers");
-    createNavigation(navDivers);
+  
 }
 
 let pagehref = window.location.href.split('/');
 let page = pagehref[pagehref.length - 1];
 
-addSeparator("Projet 2 : les différentes étapes");
+addSeparator("Ensemble des projets");
 createNavigation(navProjItems);
