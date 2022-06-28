@@ -1,0 +1,359 @@
+@font-face {
+    font-family: 'zen_kurenaidoregular';
+    src: url('./fonts/zenkurenaido-regular-webfont.woff2') format('woff2'),
+         url('./fonts/zenkurenaido-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+html {
+    background: url("../img/checker.png") fixed;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0 auto;    
+    font: 15px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #444;
+    font-weight: 300;
+    width:1340px;
+}
+
+.main-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 740px 1fr;
+    min-height: 100vh;
+}
+
+.nw1,
+.tw1 {
+    position: fixed;
+    background: linear-gradient(#fafafa, #dedede 700px);
+    min-height: 300px;
+    width: 290px;
+    margin-top: 50px; 
+}
+
+.nw1, .tw1 {
+    border-radius: 8px;
+    box-shadow: rgb(0 0 0 / 20%) 0 0 0 1px, rgb(0 0 0 / 45%) 0px 2px 10px;
+}
+
+.nw1 .logoe {
+  width: 200px;
+}
+
+.hlogo {
+  border-bottom: double 3px #aeaeae;
+}
+
+.nw1>div>a {
+  display:inline-block;
+  width: 100%;
+}
+
+.nw1-content {
+    border-top: double 3px #aeaeae;
+    padding: 10px 20px;
+}
+
+.separator {
+    letter-spacing: 0.04rem;
+    border-top: solid 1px #aeaeae;
+    border-bottom: solid 1px #aeaeae;
+    padding: 7px 5px 5px 5px;
+    color: #211705;
+    font-weight: 400;
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+.menu-items a:hover {
+    text-decoration: underline;
+    color: #069;
+}
+
+.tw1 {
+    border-radius: 8px;
+    margin-left: 10px;
+}
+
+.cw1 {
+    margin-top: 50px; 
+    margin-bottom: 0px;
+}
+
+.cw2 {
+    width: 740px;
+    margin: 0 auto;
+    background: #dedede;
+    border-radius: 8px;
+    box-shadow: rgb(0 0 0 / 20%) 0 0 0 1px, rgb(0 0 0 / 45%) 0 3px 10px;
+}
+
+header {
+    border-radius: 8px 8px 0 0;
+    background: linear-gradient(#c1d4c1, #d1ddcf);
+    position: relative;
+    padding: 15px 20px;
+    border-bottom: 1px solid #bbb;
+}
+
+
+header h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    line-height: 1.2;
+    color: #444;
+    letter-spacing: 0.15rem; 
+    font-weight:300;
+}
+
+header p {
+    font-size: 13px;
+    color: #444;
+    margin: 0;
+    text-shadow: rgba(210, 210, 210, 0.8) 0 1px 0;
+}
+
+.sections {
+    padding: 15px 20px;
+    font-size: 15px;
+    border-top: 1px solid #ffffff;
+    background: linear-gradient(#fafafa, #e6e6e6 700px);
+    border-radius: 0 0 8px 8px;
+    position: relative;
+    min-height: 800px;
+}
+
+footer {
+    width: 640px;
+    margin: 0 auto;
+    padding: 5px 0 0;
+    color: #888;
+    overflow: hidden;
+    font-weight: 600;
+    font-size: 0.85em;
+    letter-spacing: 0.15em;
+}
+
+footer p {
+    float: left;
+}
+
+h1 {
+    font-size: 28px;
+    color: #222;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #444;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.5em;
+}
+
+h3 {
+    font-size: 1.17em;
+    color: #555;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.5em;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.1;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+p,
+ol {
+    margin: 15px 0;
+    text-align: justify;
+}
+
+ul {
+    margin: 15px 45px 15px 0px;
+    text-align: justify;
+}
+
+p.ignore {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.cs,
+p.ignore {
+    font-family: Monaco, 'Bitstream Vera Sans Mono', Lucida Console, Terminal;
+    font-size: 13px;
+    color: #222;
+}
+
+a {
+    color: #069;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+a:hover {
+    color: #089;
+}
+
+b {
+    font-weight: 400;
+    font-size: 0.97em;
+}
+
+.c {
+    font-family: monospace;
+    font-size: 13px;
+    color: #222;
+    background: #cfcfcf;
+    padding: 2px 4px;
+}
+
+.fc {
+    padding: 20px;
+    margin: 15px -20px;
+    color: #f8f8f2;
+    background: #3a3c42;
+    font-size: 12px;
+    overflow-x: auto;
+    font-family: Monaco, 'Bitstream Vera Sans Mono', Lucida Console, Terminal;
+}
+
+hr {
+    margin: 30px -20px;
+    ;
+}
+
+.cmt {
+    color: #a5ffa5;
+}
+
+.fc-k {
+    color: #89cff5;
+}
+
+.fc-t {
+    color: #de9fac;
+}
+
+.fc-m {
+    color: #accfee;
+}
+
+.fc-sep {
+  color: #c7c73f;
+  font-weight: 600;
+}
+
+.fc-s {
+  color: #ce9178;
+}
+
+.tw1>div {
+    background: linear-gradient(#c1d4c1, #d1ddcf);
+    min-height: 35px;
+    display:flex;
+    align-items: center;
+    border-bottom: solid 1px #ccc;
+    border-radius: 8px 8px 0 0;
+
+}
+
+.tw1 span {    
+    color: #444;
+    font-weight: 500;
+    padding-top: 3px;
+    padding-left: 55px; 
+    font-weight: 600;
+    letter-spacing: 0.08rem;
+}
+
+.tw1 ul {
+    padding: 5px 22px;  
+    width: calc(100% - 26px);    
+}
+
+.tw1 li {
+    list-style-type: none;
+    line-height: 30px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.tw1 ul a:hover {
+    color: #0085f2;
+    border-left: 2px solid #999;
+    background-color: #f1f1f1;
+}
+
+.tw1 ul a.active {
+    color: #222;
+    border-left: 2px solid #0085f2;
+    background-color: #e9ebd8;
+    font-weight: 500;
+}
+
+.tw1 ul a {
+    display: inline-block;
+    color:#444;
+    width: calc(100% - 26px);
+    font-weight: 400;
+    border-left: 2px solid #a8b3c0;
+    padding: 0.5rem 1rem;
+    line-height: 20px;
+}
+
+.cmd_w1, .cmd_w2, .cmd_w3 {
+    display:flex;
+    flex-direction:row;
+    border-top: solid 1px #8a8a8a;
+    border-right: solid 1px #8a8a8a;
+    border-bottom: solid 1px #8a8a8a;
+    border-radius: 5px;
+    padding: 8px 8px 8px 5px;
+    letter-spacing: 0.025rem;
+    font-weight: 400;
+    font-size: 0.85rem;
+}
+
+.cmd_w1 {
+    background-color: #f5f5f5;
+    border-left: solid 5px #666;
+    color: #111;
+}
+
+.cmd_w2 {
+    background-color: #ebfffa;
+    border-left: solid 5px #004222;
+    color: #123212;
+}
+
+.cmd_w3 {
+    background-color: #ffebfa;
+    border-left: solid 5px #420022;
+    color: #321212;
+}
+
+.cmd_w_ico {
+    width: 20px;
+    margin-top: -7px;
+    margin-left: 0px;
+    padding-right:4px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+

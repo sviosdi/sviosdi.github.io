@@ -49,12 +49,9 @@ window.addEventListener('scroll', () => {
 
 const nav = document.querySelector('.nw1-content');
 const navProjItems = [
-    { name: "0: Initialisation ", link: "/P2-sout/P2-0.html", childs: null },
-    { name: "1: Découpage grossier", link: "/P2-sout/P2-1.html", childs: null },
-    { name: "2: Trame globale", link: "/P2-sout/P2-2.html", childs: null },
-    { name: "3: Réalisation de l'entête", link: "/P2-sout/P2-3.html", childs: null },
-    { name: "4: Réalisation des cards", link: "/P2-sout/P2-4.html", childs: null },
-    { name: "5: Footer et finalisations", link: "/P2-sout/P2-5.html", childs: null }
+    { name: "Projet 2 ", link: "/P2/index.html", childs: null, ext: true },
+    { name: "Projet 3 ", link: "/P3/index.html", childs: null, ext: true },
+    { name: "Projet 4 ", link: "/P4/index.html", childs: null, ext: true }
 ];
 
 
@@ -65,7 +62,8 @@ function createNavigation(items) {
     items.forEach(item => {
         let a = document.createElement("a");
         a.setAttribute("href", root +  item.link);
-        a.textContent = item.name;  
+        a.textContent = item.name;
+        if(item.ext) a.setAttribute("target", "_blank");  
         menu.appendChild(a);
     })
     nav.appendChild(menu);
@@ -92,5 +90,5 @@ function createMainMenu() {
 let pagehref = window.location.href.split('/');
 let page = pagehref[pagehref.length - 1];
 
-addSeparator("Projet 2 : les différentes étapes");
+addSeparator("Ensemble des projets");
 createNavigation(navProjItems);
