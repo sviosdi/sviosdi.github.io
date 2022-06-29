@@ -1,8 +1,8 @@
 // à remplacer par l'adresse de publication du site https://eralit.github.io ou https://eralyt.com
-const root = "/media/vincent/common data/OpenClassRooms/sviosdi.github.io";
+//const root = "/media/vincent/common data/OpenClassRooms/sviosdi.github.io";
 //const root = "http://localhost:3000/P2-0"
 //const root = "https://eralyt.github.io";
-//const root = "https://sviosdi.github.io";
+const root = "https://sviosdi.github.io";
 
 const hlogo = document.querySelector('.hlogo');
 const svg = document.querySelector('.logoe');
