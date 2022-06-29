@@ -104,6 +104,7 @@ article {
     line-height: 25px;
     color: #555;
 }
+
 .desc, .desc>h3, .desc>div {
     text-overflow: ellipsis;
     overflow: hidden;

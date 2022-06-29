@@ -1,0 +1,297 @@
+title Projet 3
+h1 Développeur d'applications Javascript-React
+h1s Projet 3 - Etape 1 : préparation du code.
+¤h2s¤ La page d'accueil
+
+¤fc¤
+¤t head meta title link script header body footer section article div a i img main h2
+¤m charset name content rel href media src alt class
+/* HTML */
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>ohmyfood</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <script src="https://kit.fontawesome.com/142b14e2d0.js" crossorigin="anonymous"></script>
+    // applique des styles à l'ensemble des pages du site
+    <link rel="stylesheet" href="./css/common.css">   
+    // les styles propres à la page d'accueil
+    <link rel="stylesheet" href="./css/accueil.css">  
+    // les variations de styles en responsive
+    <link rel="stylesheet" href="./css/responsive-layout.css">  
+</head>
+
+<body>
+
+    <div class="loader">
+        
+        // Le loader sur la page d'accueil pour recouvrir toute la page
+
+    </div>
+
+    <header>
+        <a href="./index.html">                     // la flèche de retour vers la page d'accueil
+            <i class="fa-solid fa-arrow-left"></i>  // qui n'apparaîtra que sur les pages 
+        </a>                                        // restaurants
+        <div> 
+            <img src="./images/logo/ohmyfood@2x.svg" alt="logo Ohmyfood"> // Le logo ohmyfood
+        </div>
+    </header>
+
+    <main> // jusqu'au footer
+
+        <div class="localisation">
+            <div><i class="fa-solid fa-location-dot"></i>Paris, Belleville</div>
+        </div>
+
+        <section class="presentation">
+        
+            // partie présentation : Réservez le menu qui vous convient. Explorez nos restaurants
+
+        </section>
+
+        <div class="main-content"> // regroupe les parties "fonctionnement" et "restaurants"
+
+            <section class="fonctionnement">  // Partie fonctionnement
+                <h2>Fonctionnement</h2>
+                <div>
+                    <article>
+                         // Choisissez un restaurant
+                    </article>                   
+                </div>
+            </section>
+
+            <section class="restaurants">      // Partie restaurants
+                <h2 id="resto-anchor">Restaurants</h2>
+                <div>
+                    <a href="palette_du_gout.html">
+                       
+                          // card restaurant 
+
+                    </a>
+                    <a href="note_enchantee.html">
+
+                          // card restaurant 
+
+                    </a>
+                    <a href="a_la_francaise.html">
+
+                          // card restaurant 
+
+                    </a>
+                    <a href="delice_des_sens.html">
+
+                          // card restaurant 
+                       
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+                           // footer
+    </footer>
+</body>
+
+</html>
+
+¤
+
+¤hr¤
+
+¤h2s¤ Le loader
+
+¤fc¤
+¤t div span p
+¤m class  
+/* HTML */
+<div class="loader"> // animation "fond qui disparaît" sur ce div
+    <div>
+        <span></span> // animation "3 barres qui bougent" sur ce span
+        <p>ohmyfood</p>
+    </div>
+</div>
+¤
+
+
+¤fc¤
+¤m loader div span p @keyframes 
+¤t from to 0% 60% 99% 25% 50% 75% 100%
+// acceuil.css
+/*--------------------------------------------------------------------------*/
+/*                     page loader                                          */
+/*--------------------------------------------------------------------------*/
+
+.loader {          // div qui recouvre tout le viewport et 
+  display: flex;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: #171f30;
+  z-index: 1;
+  animation: bg-fadeout 2.8s forwards;
+  background: linear-gradient(var(--om-secondaire), var(--om-primaire));
+}
+
+.loader>div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+.loader span {      // barre blanche verticale de 6x48 px bords arrondis dont l'ombre 
+                    //  est reportée à trois endroits différents dont la position est animée. 
+  display: inline-block;
+  position: relative;
+  left: -40px;     // pour recentrer les 3 barres
+  width: 6px;
+  height: 48px;
+  color: white;    // pour la couleur de l'ombre 
+  border-radius: 3px;
+  // pour que la barre de référence prenne la couleur du fond et ne soit pas visible
+  background-color: inherit;   
+  animation-name: animloader;
+  animation-duration: 0.7s;
+  animation-timing-function: linear;
+  animation-iteration-count: 4;
+}
+
+.loader p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: normal;
+  font-size: 28px;
+  color: white;
+}
+
+@keyframes animloader {
+  0% {
+    box-shadow: 20px -10px, 40px 10px, 60px 0px;
+  }
+
+  25% {
+    box-shadow: 20px 0px, 40px 0px, 60px 10px;
+  }
+
+  50% {
+    box-shadow: 20px 10px, 40px -10px, 60px 0px;
+  }
+
+  75% {
+    box-shadow: 20px 0px, 40px 0px, 60px -10px;
+  }
+
+  100% {
+    box-shadow: 20px -10px, 40px 10px, 60px 0px;
+  }
+}
+
+// Le fond reste opaque pendant presque toute la durée de l'animation,
+// puis tout à la fin il devient transparent. Il faut cependant tout de même
+// le faire disparaître, sinon on ne pourrait plus interagir avec la page (utilisation
+// de la souris). La disparition se fait en réduisant le fond de l'échelle 1 à 0 tout à la
+// fin de l'animation. Les animations n'ont pas d'effet sur la propriété 'display'
+
+@keyframes bg-fadeout {
+  from {
+    opacity: 1;
+    /*display: block;*/  // sans effet sur la propriété 'display'
+  }
+
+  60% {
+    opacity: 0.99;
+  }
+
+  99% {
+    transform: scale(1);
+  }
+
+  to {
+    /* display: none;*/ // sans effet sur la propriété 'display'
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+¤
+
+¤hr¤
+
+¤h2s¤ Les cards 'restaurants'
+
+¤fc¤
+¤t a div img h3 span i 
+¤m href class src onclick 
+/* HTML */
+<a href="palette_du_gout.html">
+    <div class="nouveau">Nouveau</div>
+    <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
+    <div class="desc-rest">                            
+        <div>
+            <h3>La palette du goût</h3>
+            <span>Ménilmontant</span>
+        </div>
+        <div onclick="event.preventDefault(); event.stopPropagation();" class="coeur">
+            <i class="fa-regular fa-heart"></i>   // le coeur creux
+            <i class="fa-solid fa-heart"></i>     // le coeur plein
+        </div>
+    </div>
+</a>
+¤
+¤hr¤
+
+¤h2s¤ Propriété transition sur les coeurs.
+
+¤fc¤
+¤m coeur i hover first child last 
+¤t from to 0% 60% 99% 25% 50% 75% 100%
+// commons.css  (s'applique aux coeurs de toutes les pages)
+/*---------------------------------------------------------------------------------*/
+/*                      affichage du coeur                                         */
+/*---------------------------------------------------------------------------------*/
+
+.coeur {
+    /* Englobe les deux coeurs, creux et plein.                               */
+    /* Il est important de mettre un fond à l'élément auquel il appartient.   */
+    position: relative;
+    background-color: inherit;
+}
+
+.coeur:hover {
+    cursor: pointer;
+}
+
+.coeur i {
+    /* les icônes coeur */
+    font-size: 24px;
+}
+
+/* Le coeur creux est au-dessus du coeur plein. Le plein est caché par le fond blanc du creux. */
+
+.coeur i:first-child {
+    /* le coeur creux */
+    position: absolute; // permet au coeur plein de se superposer au coeur creux
+    color: #888;
+    background-color: inherit; // reprend la couleur blanche du fond
+    transition: all 0.5s ease;
+}
+
+/* hover sur coeur creux: le creux devient transparent pour laisser apparaître le plein. */
+.coeur i:first-child:hover {
+    background-color: transparent;
+    color: var(--om-primaire);
+}
+
+/* Le background dégradé du coeur plein est clipé sur le texte, c-à-d qu'il épouse la forme de la    */
+/* partie texte qui est ici le coeur plein. Puis en rendant le texte (coeur plein) transparent, il   */ 
+/*  n'apparait plus alors que le fond dégradé en forme de coeur.                                     */
+.coeur i:last-child {
+    /* le coeur plein */
+    background: linear-gradient(var(--om-secondaire), var(--om-primaire));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+

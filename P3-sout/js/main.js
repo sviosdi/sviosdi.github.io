@@ -1,8 +1,8 @@
 // à remplacer par l'adresse de publication du site https://eralit.github.io ou https://eralyt.com
-//const root = "/media/vincent/common data/OpenClassRooms/Projet_02/soutenance/presentation";
+const root = "/media/vincent/common data/OpenClassRooms/sviosdi.github.io";
 //const root = "http://localhost:3000/P2-0"
 //const root = "https://eralyt.github.io";
-const root = "https://sviosdi.github.io";
+//const root = "https://sviosdi.github.io";
 
 const hlogo = document.querySelector('.hlogo');
 const svg = document.querySelector('.logoe');
@@ -49,12 +49,9 @@ window.addEventListener('scroll', () => {
 
 const nav = document.querySelector('.nw1-content');
 const navProjItems = [
-    { name: "0: Initialisation ", link: "/P2-sout/P2-0.html", childs: null },
-    { name: "1: Découpage grossier", link: "/P2-sout/P2-1.html", childs: null },
-    { name: "2: Trame globale", link: "/P2-sout/P2-2.html", childs: null },
-    { name: "3: Réalisation de l'entête", link: "/P2-sout/P2-3.html", childs: null },
-    { name: "4: Réalisation des cards", link: "/P2-sout/P2-4.html", childs: null },
-    { name: "5: Footer et finalisations", link: "/P2-sout/P2-5.html", childs: null }
+    { name: "1: La page d'accueil", link: "/P3-sout/P3-0.html", childs: null },
+    { name: "2: Les pages restaurants", link: "/P3-sout/P3-1.html", childs: null },
+    { name: "3: Affichage responsive", link: "/P3-sout/P3-2.html", childs: null }
 ];
 
 
@@ -92,5 +89,5 @@ function createMainMenu() {
 let pagehref = window.location.href.split('/');
 let page = pagehref[pagehref.length - 1];
 
-addSeparator("Projet 2 : les différentes étapes");
+addSeparator("Projet 3 : les différentes étapes");
 createNavigation(navProjItems);

@@ -1,0 +1,246 @@
+title Projet 3
+h1 Développeur d'applications Javascript-React
+h1s Projet 3 - Etape 2 : les pages restaurants.
+¤h2s¤ Les pages restaurants.
+
+
+
+
+¤fc¤
+¤t head meta title link script body header footer div img h1 i section article h2 h3 main a
+¤m charset name content rel href media class src type alt
+/* HTML */
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>ohmyfood - La palette du goût</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <script src="https://kit.fontawesome.com/142b14e2d0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/resto.css">
+    <link rel="stylesheet" href="./css/responsive-layout.css">
+</head>
+
+<body>
+    <header>
+        <a href="./index.html">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
+        <div>
+            <img src="./images/logo/ohmyfood@2x.svg" alt="logo Ohmyfood">
+        </div>
+    </header>
+
+    <main> // tout jusqu'au footer
+        <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
+        <div class="main-content restos">
+            <div>
+                <h1>La palette du goût</h1>
+                <div class="coeur">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+            </div>
+            <div>
+                <section> // Présentation des entrées
+                    <h2>Entrées</h2>
+                    <article>
+                        
+               // présentation d'une des entrées proposées sur les trois
+
+                    </article>
+
+                    <article>
+
+                // une autre entrée
+
+                    </article>
+                   
+                   // .... etc ...
+
+                </section>
+
+                <section> // Présentations des plats
+                    <h2>Plats</h2>
+                    <article>
+
+                       // .....
+
+                    </article>
+                    
+                </section>
+
+                <section> // présentation des desserts
+                    <h2>Desserts</h2>
+                    <article>
+                      
+                      // ....
+
+                    </article>
+                    
+                </section>
+            </div>
+            <div> // Bouton pour passer la commande
+                <button type="button" class="om-button cmd">Commander</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <h3>ohmyfood</h3>
+            <a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a>
+            <a href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</i></a>
+            <a href="#">Mentions légales</a>
+            <a href="#">Contact</a>
+        </div>
+    </footer>
+</body>
+
+</html>
+¤
+
+
+¤h2s¤Les cards 'proposition de plat'
+
+¤fc¤
+¤t article div h3 i 
+¤m class 
+/* HTML */
+
+<article>
+    <div class="desc">
+        <h3>Foie gras de canard mi-cuit</h3>
+        <div>Et ses copeaux de truffe noire</div>
+    </div>
+
+    // on rattache le prix à la coche, car c'est la partie 'mouvante'.
+    // c'est tout ce div qui en translation va écraser le div précédent .desc
+    <div class="mov">
+        <div>
+            25€
+        </div>
+        <div> // lors de la transition passe de largeur 0px à 70px.
+            <div class="rel-mov">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+        </div>
+    </div>
+</article>
+¤
+
+¤h2s¤ Animation lors de la sélection d'un plat.
+
+¤fc¤
+¤m mov div article hover last child i rel 
+// resto.css
+/*---------------------------------------------------------------------------------*/
+/*                      animation selection plat                                   */
+/*---------------------------------------------------------------------------------*/
+
+.mov {
+    display: flex;
+}
+
+.mov>div:last-child {
+    /* le div englobant la coche               */
+    /* pour la transition en translation       */
+    background-color: #8fdeca;
+    width: 0px;
+    height: 100%;
+    // transition sur la largeur
+    transition: width 0.5s ease;   
+}
+
+
+// transition sur l'élément précédent déclenchée lors d'un hover au-dessus de tout l'article
+article:hover .mov>div:last-child {
+   width: 70px;
+}
+
+// l'icône 'coche' elle-même retournée d'un tour complet lors d'un hover au dessus de 
+// tout l'article
+article:hover .rel-mov>i {
+    transform: rotate(360deg);
+}
+
+.rel-mov {
+    display: flex;
+    height: 100%;
+    width: 70px;
+}
+
+.rel-mov>i {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    margin: auto;
+    transform: rotate(0deg);
+    transition: transform 0.8s ease; 
+}
+¤
+
+¤hr¤
+
+¤h2s¤Les ellipsis...
+
+¤fc¤
+¤m desc h3 div
+// resto.css
+// nécessaire sur les trois éléments pour que cela fonctionne
+.desc, .desc>h3, .desc>div {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+¤
+
+¤hr¤
+
+¤h2s¤Animation lors de l'apparition des plats
+
+¤fc¤
+¤m section article nth-of-type @keyframes from to 75%
+¤t 1 2 3 4 plats
+// resto.css
+/*---------------------------------------------------------------------------------*/
+/*                      animation de l'apparitions des plats                       */
+/*---------------------------------------------------------------------------------*/
+
+section>article:nth-of-type(1) { // 1ère proposition de plat
+    animation: plats 100ms 0ms forwards;
+}
+
+section>article:nth-of-type(2) { // 2ème proposition de plat
+    animation: plats 1000ms 200ms forwards;
+}
+
+section>article:nth-of-type(3) { // 3ème proposition de plat
+    animation: plats 1000ms 400ms forwards;
+}
+
+section>article:nth-of-type(4) { // 4ème proposition de plat
+    animation: plats 1000ms 600ms forwards;
+}
+
+
+@keyframes plats {
+    from {
+        opacity: 20%;
+        // au départ de l'animation, chaque plat est 15px en dessous de sa position finale
+        transform: translateY(15px);
+    }
+
+    75% {
+        opacity: 65%;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+¤
