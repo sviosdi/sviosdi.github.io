@@ -15,20 +15,32 @@ header a {
 }
 
 .localisation>div {
+  display: flex;
   /* texte de la localisation */
   margin: auto;
   /* largeur égale à celle de l'image pour un 
      alignement de l'icône avec le début du logo */
   width: 150px;
-  color: #353535;
-  font-weight: 500;
-  font-size: 15.5px;
+  color: #red;
+
   /* letter-spacing: 0.015rem;*/
 }
 
 .localisation i {
   /* icône localisation */
   margin-right: 15px;
+}
+
+.localisation input {
+  outline: 0px;
+  border: none;
+  background: inherit;
+  font-weight: 500;
+  font-size: 15.5px;
+}
+
+.localisation input:focus {
+  background-color: #fafafa;
 }
 
 /*--------------------------------------------------------------------------*/
@@ -64,7 +76,7 @@ header a {
   padding: 50px 20px 40px 20px;
 }
 
-.fonctionnement article {
+.fonctionnement li {
   position: relative;
   display: flex;
   height: 70px;
@@ -74,7 +86,7 @@ header a {
   margin: 30px 10px;
 }
 
-.fonctionnement article span {
+.fonctionnement li span {
   /* le numéro de l'étape */
   position: absolute;
   width: 22px;
@@ -90,7 +102,7 @@ header a {
   left: -11px;
 }
 
-.fonctionnement article>div {
+.fonctionnement li>div {
   /* chaque item : Choisissez.., Composez..., Dégustez... */
   margin: auto 30px;
   font-size: 14px;
@@ -98,11 +110,11 @@ header a {
   color: #353535;
 }
 
-.fonctionnement article:hover i {
+.fonctionnement li:hover i {
   color: var(--om-primaire);
 }
 
-.fonctionnement article>div i {
+.fonctionnement li>div i {
   /* l'icône de chaque item */
   font-size: 18px;
   margin-right: 25px;
