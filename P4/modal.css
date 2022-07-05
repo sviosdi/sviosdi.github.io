@@ -40,10 +40,11 @@ img {
 .header-logo {
   float: left;
   margin-bottom: 50px;
-  margin-right: 50px;
+  margin-right: 10px;
 }
 
 .main-navbar {
+  position: relative;
   float: right;
 }
 
@@ -106,7 +107,7 @@ img {
 
 
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 580px) {
   .topnav a {
     display: none;
   }
