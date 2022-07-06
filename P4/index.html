@@ -54,7 +54,7 @@
     <div class="bground">
       <div class="content">
         <div class="modal-body">
-          <span class="close"></span>
+          <span class="close close-action"></span>
           <form name="reserve" action="javascript:void(0)" method="POST">
             <div class="formData">
               <label for="first">Prénom</label>
@@ -128,18 +128,9 @@
             <div id="submitting">Envoi du formulaire en cours<span id="submit-anim"> | </span></div>
             <input class="button btn-submit" id="soumission" type="submit" value="C'est parti" />
             <div class="feedback">
-              <div>
-                <span class="close"></span>
-                <p>Merci</p>
-                <p>Votre inscription a été prise en compte.</p>
-                <p>Vous êtes attendu cet automne à <span id="feedback-town">nom de la ville</span></p>
-                <div>
-                  <p>Votre inscription ne sera cependant définitive que lorsque vous nous aurez fait parvenir les
-                    pièces justificatives et que votre dossier sera accepté.</p>
-                  <p>La liste des pièces justificatives et l'adresse d'envoi sont sur la page "Détails de l'événement".
-                  </p>
-                </div>
-              </div>
+              <span class="close close-action"></span>
+              <p>Merci pour votre inscription</p>
+              <input class="close-mod close-action button btn-submit" value="Fermer" />
             </div>
           </form>
         </div>

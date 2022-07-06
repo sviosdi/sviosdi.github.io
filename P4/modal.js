@@ -45,7 +45,7 @@ const conditions_error = document.querySelector("#conditions-error");
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 // ajout d'un listener 'click' sur les boutons de fermeture du formulaire
-let btncoll = document.querySelectorAll(".close");
+let btncoll = document.querySelectorAll(".close-action");
 for (btn of btncoll)
   btn.addEventListener("click", closeModal);
 // ajout d'un listener 'click' sur le bouton de soumission du formulaire.
@@ -100,13 +100,13 @@ function validation(event) {
   // empêche les vérifications 'HTML' des champs du formulaire 
   event.preventDefault();
   const champs = [
-    { validate_fct: validationPrenom, err: prenom_error },
-    { validate_fct: validationNom, err: nom_error },
-    { validate_fct: validationEmail, err: mail_error },
-    { validate_fct: validationDate, err: date_error },
-    { validate_fct: validationNbParticipation, err: nb_part_error },
-    { validate_fct: validationVille, err: ville_error },
-    { validate_fct: validationConditions, err: conditions_error },
+    { validate_fct: validationPrenom, err: prenom_error, champ: f_prenom },
+    { validate_fct: validationNom, err: nom_error, champ: f_nom },
+    { validate_fct: validationEmail, err: mail_error, champ: f_mail },
+    { validate_fct: validationDate, err: date_error, champ: f_date },
+    { validate_fct: validationNbParticipation, err: nb_part_error, champ: f_nb_part },
+    { validate_fct: validationVille, err: ville_error, champ: null },
+    { validate_fct: validationConditions, err: conditions_error, champ: null },
   ];
 
   user = {};
@@ -115,9 +115,11 @@ function validation(event) {
   champs.forEach(function (elt) { // applique la fonction passée en paramètre à chaque élément du tableau champs.
     if (!elt.validate_fct()) {
       elt.err.style.display = "block";
+      if(elt.champ) elt.champ.style.border = "2px solid  #ff4e60";
       isValide = false;
     } else {
       elt.err.style.display = "none";
+      if(elt.champ) elt.champ.style.border = 'none';
     }
   });
 
@@ -131,7 +133,6 @@ function validation(event) {
     soumissionBtn.disabled = true;
     document.getElementById('submitting').style.display = 'block';
     setTimeout(() => {       
-      document.getElementById('feedback-town').textContent = user.ville;
       showFeedBack();
       document.getElementById('submitting').style.display = 'none';
       soumissionBtn.disabled = false;

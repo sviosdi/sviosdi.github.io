@@ -460,7 +460,6 @@ input[data-error]::after {
   color: #fff;
   position: relative;
   text-align: left;
-  min-width: 424px;
 }
 
 .hero-content::after {
@@ -482,6 +481,7 @@ input[data-error]::after {
   font-size: 6rem;
   font-weight: normal;
   white-space: nowrap;
+  word-break: break-word;
 }
 
 .hero-text {
@@ -556,7 +556,8 @@ footer {
   }
 
   .hero-text {
-    width: unset;
+    min-width: 150px;
+    width: 100%;
     font-size: 1.5rem;
   }
 
@@ -611,48 +612,35 @@ footer {
   right:0px;
   width: 100%;
   height: 100%;
-  background-color: #ffffffaa;
+  background-color: #232323;
   margin: 0px;
   border-radius: 10px;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
   animation: feedbackanim 1s ease forwards;
-  border: solid 3px #cfcfcf;
+  border: solid 3px #343434;
 }
 
-.feedback>div {
-  position: relative;
-  background: rgb(129, 228, 154);
-  color: rgb(12, 75, 17);
+.feedback>p {
+  width: 272px;
+  font-weight: 400;
+  font-size: 36px;
+  color: white;
   margin: auto;
-  padding: 30px;
-  font-size: 15px;
-  opacity: 1;
-  border-radius: 10px;
-  font-weight: normal;
+  text-align:center;
+  padding: 0;
 }
 
 .feedback .close {
   top: 10px;
   right: 12px;
 }
-.feedback .close::before, .feedback .close::after{
-  background-color: rgb(12, 75, 17);
+
+.close-mod {
+  width: 160px;
+  padding: 10px 20px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-.feedback p {
-  padding: 2px;
-}
-
-
-.feedback>div>div {
-  background: #42583a;
-  color: white;
-  margin: 10px;
-  padding: 5px 15px;
-  border-radius: 5px;
-
-}
 
 @keyframes feedbackanim {
   from {
