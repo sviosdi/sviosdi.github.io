@@ -653,13 +653,14 @@ footer {
   border-radius: 5px;
 
 }
+
 @keyframes feedbackanim {
   from {
     bottom: 100%;
   }
 
   to {
-    transform: 0px;
+    bottom: 0px;
   }
 }
 

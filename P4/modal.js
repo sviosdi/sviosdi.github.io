@@ -112,7 +112,7 @@ function validation(event) {
   user = {};
 
   let isValide = true;
-  champs.forEach(function (elt) {
+  champs.forEach(function (elt) { // applique la fonction passée en paramètre à chaque élément du tableau champs.
     if (!elt.validate_fct()) {
       elt.err.style.display = "block";
       isValide = false;
@@ -261,3 +261,7 @@ function resetForm() {
   if (villeElt) villeElt.checked = false;
   f_events.checked = false;
 }
+
+
+
+
