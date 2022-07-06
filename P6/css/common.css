@@ -1,0 +1,14 @@
+body {
+    font-family: "DM Sans", sans-serif;
+    margin: 0;
+}
+
+
+.logo {
+    height: 50px;
+    margin-left: 100px;
+}
+
+* {
+    box-sizing: border-box;
+}

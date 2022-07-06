@@ -1,11 +1,12 @@
 #contact_modal {
     display: none;
-}
-
-.photograph-header {
-    background-color: #FAFAFA;
-    height: 300px;
-    margin: 0 100px;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    background: #00000080;
+    overflow: auto;
 }
 
 .contact_button {
@@ -22,37 +23,71 @@
 }
 
 .modal {
+    display: block;
+    position: relative;
     border-radius: 5px;
     background-color: #DB8876;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
+    width: 706px;
     align-items: center;
-    justify-content: space-between;
     padding: 35px;
-    margin: auto;
+    margin: 30px auto;
+    animation: modalopen 600ms forwards;
 }
 
+
+@keyframes modalopen {
+    from {
+      opacity: 0;
+      top: -400px;
+    }
+  
+    to {
+      opacity: 1;
+      top: 0;
+    }
+  }
+  
+  @keyframes modalclose {
+    from {
+      opacity: 1;
+      top: 0px;
+    }
+  
+    to {
+      opacity: 0;
+      top: -400px;
+    }
+  }
+
+
 .modal header {
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
     width: 100%;
+    height: 100%;
+    margin-bottom: 30px;
+    
+}
+
+.modal header>div {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .modal header img {
     cursor: pointer;
+    margin-left: 30px;
 }
 
-.modal header h2 {
+.modal h2 {
     font-size: 64px;
     font-weight: normal;
-    text-align: center;
+    margin: 0px;
 }
 
 form {
-    display: flex;
     width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
 }
 
 form label {
@@ -61,16 +96,296 @@ form label {
 }
 
 form div {
-    display: flex;
-    flex-direction: column;
     width: 100%;
     align-items: self-start;
     margin-bottom: 26px;
 }
 
+form input,
+form textarea {
+    width: 100%;   
+    border: 3px solid white;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 28px;
+    color: #211515;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
 form input {
-    width: 100%;
     height: 68px;
-    border: none;
+}
+
+form textarea {
+    padding: 10px 15px;
+    resize: none;
+}
+
+form input:focus,
+form textarea:focus {
+    border: 3px solid #901C1C;
+    outline: none;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 90px;
+}
+
+main {
+    margin: 0 100px;
+}
+
+.photograph-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+    background-color: #FAFAFA;
+    height: 300px;
+}
+
+
+.photograph-header h1 {
+    font-weight: 400;
+
+}
+
+.photograph-header img {
+    height: 200px;
+    width: 200px;
+    min-width: 200px;
+    border-radius: 100px;
+    object-fit: cover;
+    margin-left: 30px;
+}
+
+.pph-name {
+    font-size: 64px;
+    color: #d3573c;
+    margin: 5px 0px;
+}
+
+.pph-location {
+    font-size: 24px;
+    color: #901c1c;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.pph-tagline {
+    font-size: 18px;
+    color: #525252;
+    margin-top: 20px;
+}
+
+.pph-media {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 70px;
+    margin-bottom: 100px;;
+}
+
+
+
+.md-card img,
+.md-card video {
+    width: 100%;
+    min-width: 200px;
+    height: 250px;
+    background-color: #ccc;
+    object-fit: cover;
     border-radius: 5px;
 }
+
+.md-card a {
+    display: flex;
+    height: 250px;
+    position: relative;
+}
+
+.md-card video {
+    position: absolute;
+    top: 0px;
+}
+
+.md-card .playBtn {
+    position: relative;
+    margin: auto;
+    top: 0px;
+    bottom: 0px;
+    z-index: 1;
+    color: #901c1cee;
+    font-size: 72px;
+}
+
+.md-card p {
+    margin: 10px 0px;
+}
+
+.md-card>div {
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    color: #901c1c;
+    align-items: flex-start;
+}
+
+
+.md-card>div>div {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.md-card>div>div i:nth-child(2) {
+    position: absolute;
+    right: 0px;
+    color: transparent;
+    /* rouge lors de la sélection */
+}
+
+.md-card>div>div>i {
+    margin-left: 5px;
+}
+
+.pph-price {
+    position: fixed;
+    bottom: 0px;
+    right: 50px;
+    min-width: 350px;
+    height: 76px;
+    background-color: #db8876;
+    border-radius: 5px;
+    z-index: 2;
+
+}
+
+.pph-price {
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: 500;
+    align-items: center;
+}
+
+.pph-price>div {
+    display: flex;
+    align-items: center;
+    margin-left: 35px;
+}
+
+.pph-price>div>i {
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+.pph-price>div>p {
+    margin: 0px;
+}
+
+.pph-price-fixed {
+    margin-right: 35px;
+
+}
+
+
+/*--------------------------------------------------------------------------------*/
+/*            la fenêtre recouvrante feedback                                     */
+/*--------------------------------------------------------------------------------*/
+
+.feedback {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0px;
+    right:0px;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffffaa;
+    margin: 0px;
+    border-radius: 10px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    animation: feedbackanim 1s ease forwards;
+    border: solid 3px #cfcfcf;
+  }
+  
+  .feedback>div {
+    position: relative;
+    background: #901C1C;
+    color: white;
+    padding: 30px;
+    font-size: 15px;
+    opacity: 1;
+    border-radius: 10px;
+    font-weight: normal;
+    margin: auto 80px;
+  }
+
+  .feedback .close:before {
+    transform: rotate(45deg);
+  }
+
+  .feedback .close:after {
+    transform: rotate(-45deg);
+  }
+
+  .feedback .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    /*transform: scale(0.7);*/
+  }
+
+  .feedback .close::before, .feedback .close::after{
+    position: absolute;
+    left: 15px;
+    content: " ";
+    height: 32px;
+    width: 4px;
+    background-color: white;
+  }
+  
+  
+  .feedback-msg {
+    color: white;
+    padding: 40px 10px 10px 10px;
+    border-radius: 5px;
+    font-size: 24px;
+  }
+
+  @keyframes feedbackanim {
+    from {
+      bottom: 100%;
+    }
+  
+    to {
+      transform: 0px;
+    }
+  }
+  
+/*--------------------------------------------------------------------------------*/
+/*            la parti tri                                                        */
+/*--------------------------------------------------------------------------------*/
+
+.tri-section {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    
+}
+
+.tri-section label {
+    font-size: 18px;
+    font-weight: 700;
+    margin-right: 25px;
+}
+
