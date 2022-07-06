@@ -1,0 +1,55 @@
+title Projet 4
+h1 Développeur d'applications Javascript-React
+h1s Projet 4 - Recherche des erreurs.
+¤h2s¤ Recherche des erreurs.
+
+En passant le code dans l'outil de validation HTML/CSS du W3C on relevait quelques erreurs. Une balise fermante ne correspondait à aucune balise ouvrante. Le css ne comportait pas d'erreurs de syntaxe.
+Cependant il y avait quelques modifications à apporter en rajoutant des breakpoints responsive pour un affichage correct. Il manquait notamment une propriété `position: relative` sur conteneur du bouton de navigation qui lui était un `position: absolute` ce qui entrainait un mauvais affichage pour des viewports étroits.
+
+¤hr¤
+¤h2s¤ Ajout des champs du formulaire
+
+
+Rattacher un libellé à un élément de saisie `&lt;input&gt;` offre différents avantages :
+¤ul¤
+Le texte du libellé n'est pas seulement associé visuellement au champ, il est techniquement associé avec le champ. Ainsi, lorsque l'utilisateur a le focus sur le champ, un lecteur d'écran pourra énoncer le contenu du libellé et permettre à l'utilisateur de disposer d'un meilleur contexte.
+Vous pouvez cliquer sur le libellé pour passer le focus voire activer le champ. De cette façon, on dispose d'une meilleure ergonomie car la surface d'utilisation du champ est agrandie, ce qui s'avère utile sur les petits appareils comme les téléphones portables.
+¤
+
+Un champ  `<span class="fdata-error" id="mail-error"></span>` a été ajouté après chaque champ du formulaire pour afficher les messages d'erreurs.
+
+¤fc¤
+¤t head meta title link script body header footer div img h1 i section article h2 h3 main a
+¤m charset name content rel href media class src type alt
+/* HTML */
+¤t form div label input span br
+¤m for class type id name minlength value
+<form name="reserve" action="javascript:void(0)" method="POST">
+            <div class="formData">
+              <label for="first">Prénom</label>
+              <input class="text-control" type="text" id="first" name="first" minlength="2" />
+              <span class="fdata-error" id="prenom-error">Vous avez très certainement mal orthographié votre
+                prénom</span>
+            </div>
+          
+        /*                     ..... etc .....                       */
+        
+        
+        
+        <div id="submitting">Envoi du formulaire en cours<span id="submit-anim"> | </span></div>
+        <input class="button btn-submit" id="soumission" type="submit" value="C'est parti" />
+        <div class="feedback">
+          <div>
+            <span class="close"></span>
+            <p>Merci</p>
+            <p>Votre inscription a été prise en compte.</p>
+            <p>Vous êtes attendu cet automne à <span id="feedback-town">nom de la ville</span></p>
+            <div>
+              <p>Votre inscription ne sera cependant définitive que lorsque vous nous aurez fait parvenir les
+                pièces justificatives et que votre dossier sera accepté.</p>
+              <p>La liste des pièces justificatives et l'adresse d'envoi sont sur la page "Détails de l'événement".
+              </p>
+            </div>
+          </div>
+¤
+¤hr¤

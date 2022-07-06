@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/ns.svg">
+    <title>Projet 4</title>
+    <link rel=" stylesheet" href="./css/main.css">
+    <link rel=" stylesheet" href="./css/custom.css">
+  <script src="./js/main.js" defer></script>
+  </head>
+  <body>
+    <div class="main-wrapper">
+
+      <div class="nav">
+        <div class="nw1">        <div class='hlogo'>
+<svg class="logoe" viewBox="20 67 500 210" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="159.563" y1="133.941" x2="159.563" y2="186.536" id="gradient-1" spreadMethod="pad" gradientTransform="matrix(1, 0, 0, 1, 49.789622, 86.255257)">
+      <stop offset="0" style="stop-color: rgb(169, 161, 70);"/>
+      <stop offset="1" style="stop-color: rgb(89, 73, 27);"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="201.256" y1="39.954" x2="201.256" y2="163.376" id="gradient-0" gradientTransform="matrix(1, 0, 0, 1, 47.685833, 82.047684)">
+      <stop offset="0" style="stop-color: rgb(3, 3, 31);"/>
+      <stop offset="1" style="stop-color: rgb(11, 7, 37);"/>
+    </linearGradient>
+    <linearGradient x1="-0.186" x2="-0.186" y1="0.028" y2="1.028" id="gradient-4" gradientTransform="matrix(0.998247, 0.06147, -0.057587, 1.008972, 0, 0)">
+      <stop offset="0" style="stop-color: rgb(169, 161, 70);"/>
+      <stop offset="1" style="stop-color: rgb(159, 132, 51);"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="-2.103" y1="146.523" x2="-2.103" y2="389.16" id="gradient-2" gradientTransform="matrix(0.259843, 0, 0, 0.206326, 101.014554, 61.065027)">
+      <stop offset="0" style="stop-color: rgb(141, 133, 40);"/>
+      <stop offset="0.961" style="stop-color: rgb(45, 42, 11);"/>
+      <stop offset="1" style="stop-color: rgba(36, 34, 10, 1)"/>
+    </linearGradient>
+  </defs>
+  <text style="fill: url(#gradient-0); font-family: &quot;zen_kurenaidoregular&quot;; font-size: 85px; font-weight: 700; letter-spacing: 6px; stroke: rgb(8, 2, 31); text-transform: uppercase; white-space: pre;" x="106.456" y="220.88">ERALYT</text>
+  <text style="fill: url(#gradient-1); font-family: &quot;zen_kurenaidoregular&quot;; font-size: 36px; font-weight: 700; letter-spacing: 5px; paint-order: fill; stroke: rgb(65, 63, 26); white-space: pre;" x="169.004" y="262.273">DATA</text>
+  <g transform="matrix(0.534462, 0, 0, 0.523607, 67.951286, -69.154846)">
+    <path style="fill: url(#gradient-4); stroke: rgb(65, 63, 26); paint-order: fill;" d="M 120.482 414.082 C 118.897 416.526 132.833 382.204 123.901 369.903 C 125.11 363.286 130.978 368.964 135.523 375.286 C 140.968 376.293 138.162 335.279 144.751 336.2 C 149.048 336.57 156.067 344.767 154.324 357.724 C 156.013 359.558 166.852 337.108 165.261 333.084 C 163.983 327.006 174.221 313.378 176.541 313.827 C 176.943 310.226 187.903 308.025 188.161 311.279 C 197.419 311.2 177.311 335.036 186.456 331.949 C 201.976 316.116 250.508 313.794 248.323 320.058 C 237.283 320.57 220.211 327.19 201.491 338.317 C 173.205 355.127 141.158 382.223 120.482 414.082 Z"/>
+  </g>
+  <path style="stroke: rgb(65, 63, 26); paint-order: fill; fill: url(#gradient-2);" d="M 132.539 148.83 C 141.798 128.039 167.65 107.306 184.532 102.076 C 188.928 100.715 200.701 97.34 201.964 98.916 C 200.207 100.804 203.123 103.413 192.853 105.343 C 190.181 105.845 184.933 108.217 181.148 109.299 C 170.467 112.352 173.388 117.071 182.285 116.252 C 189.007 115.633 196.799 119.975 192.307 122.976 C 182.323 129.645 156.897 122.174 162.814 126.351 C 168.411 130.302 179.704 141.621 160.054 135.53 C 148.996 129.379 132.627 149.064 132.539 148.83 Z"/>
+</svg></div>
+ <div class='nw1-content'></div></div>
+      </div>
+
+      <div class="content">
+        <div class="cw1">
+          <div class="cw2">
+            <header>
+              <h1>Développeur d'applications Javascript-React</h1>
+              <p>Projet 4 - Les validation Javascript.</p>
+            </header>
+            <div class="sections">
+<section>
+<h2 id='0'> récupération des principaux éléments DOM</h2>
+<p>
+On commence par récupérer en variables globales tous les principaux éléments du DOM.
+</p>
+<pre class='fc'><span class='cmt'>/* javascript */</span><br><span class='cmt'>/*------------------------------------------------------------------------------*/</span><br><span class='cmt'>/*                 récupération des principaux éléments DOM                     */</span><br><span class='cmt'>/*------------------------------------------------------------------------------*/</span><br><br><span class='fc-k'>const</span> modalbg = document.querySelector(<span class='fc-s'>".bground"</span>);<br><span class='fc-k'>const</span> modalBtn = document.querySelectorAll(<span class='fc-s'>".modal-btn"</span>);<br><span class='fc-k'>const</span> formData = document.querySelectorAll(<span class='fc-s'>".formData"</span>);<br><span class='fc-k'>const</span> contentClass = document.querySelector(<span class='fc-s'>".content"</span>);<br><span class='fc-k'>const</span> feedback = document.querySelector(<span class='fc-s'>".feedback"</span>);<br><span class='fc-k'>const</span> soumissionBtn = document.querySelector(<span class='fc-s'>"#soumission"</span>);<br><span class='cmt'>/* références aux différents champs du formulaire */</span><br><span class='fc-k'>let</span> f_prenom = document.getElementById(<span class='fc-s'>'first'</span>);<br><span class='fc-k'>let</span> f_nom = document.getElementById(<span class='fc-s'>'last'</span>);<br><span class='fc-k'>let</span> f_mail = document.getElementById(<span class='fc-s'>'email'</span>);<br><span class='fc-k'>let</span> f_date = document.getElementById(<span class='fc-s'>'birthdate'</span>);<br><span class='fc-k'>let</span> f_nb_part = document.getElementById(<span class='fc-s'>'quantity'</span>);<br><span class='fc-k'>let</span> f_conditions = document.getElementById(<span class='fc-s'>'checkbox1'</span>);<br><span class='fc-k'>let</span> f_events = document.getElementById(<span class='fc-s'>'checkbox2'</span>);<br><span class='cmt'>/* références vers les différents messages d'erreurs du formulaire */</span><br><span class='fc-k'>const</span> prenom_error = document.querySelector(<span class='fc-s'>"#prenom-error"</span>);<br><span class='fc-k'>const</span> nom_error = document.querySelector(<span class='fc-s'>"#nom-error"</span>);<br><span class='fc-k'>const</span> mail_error = document.querySelector(<span class='fc-s'>"#mail-error"</span>);<br><span class='fc-k'>const</span> date_error = document.querySelector(<span class='fc-s'>"#date-error"</span>);<br><span class='fc-k'>const</span> nb_part_error = document.querySelector(<span class='fc-s'>"#nb_part-error"</span>);<br><span class='fc-k'>const</span> ville_error = document.querySelector(<span class='fc-s'>"#ville-error"</span>);<br><span class='fc-k'>const</span> conditions_error = document.querySelector(<span class='fc-s'>"#conditions-error"</span>);<br></pre>
+
+<hr>
+</section>
+
+<section>
+<h2 id='1'> Ajout des listeners</h2><pre class='fc'><span class='cmt'>// launch modal event</span><br>modalBtn.forEach((btn) =&gt; btn.addEventListener(<span class='fc-s'>"click"</span>, launchModal));<br><span class='cmt'>// ajout d'un listener 'click' sur les boutons de fermeture du formulaire</span><br><span class='fc-k'>let</span> btncoll = document.querySelectorAll(<span class='fc-s'>".close"</span>);<br>for (btn of btncoll)<br>  btn.addEventListener(<span class='fc-s'>"click"</span>, closeModal);<br><span class='cmt'>// ajout d'un listener 'click' sur le bouton de soumission du formulaire.</span><br><span class='cmt'>// Ce listener est nécessaire, car il permet d'utiliser preventDefault() qui empêchera l'appel </span><br><span class='cmt'>// de onsubmit = "return validate()" lorsque celui-ci est présent et empêchera de même </span><br><span class='cmt'>// les vérifications HTML inhérentes aux champs du formulaires. (type="email", min-length=2... etc) </span><br>soumissionBtn.addEventListener(<span class='fc-s'>"click"</span>, validation);<br></pre>
+<pre class='fc'><span class='cmt'>// HTML</span><br>&lt;<span class='fc-t'>input</span> <span class='fc-m'>class</span>=<span class='fc-s'>"button btn-submit"</span> <span class='fc-m'>id</span>=<span class='fc-s'>"soumission"</span> <span class='fc-m'>type</span>=<span class='fc-s'>"submit"</span> <span class='fc-m'>value</span>=<span class='fc-s'>"C'est parti"</span> /&gt;<br></pre>
+
+<hr>
+</section>
+
+<section>
+<h2 id='2'>La fonction de validation</h2><pre class='fc'><span class='cmt'>// javascript</span><br><span class='fc-k'>let</span> user = <span class='fc-sep'>{</span><span class='fc-sep'>}</span>;<br><br><br><span class='fc-k'>function</span> validation(event) <span class='fc-sep'>{</span><br>  <span class='cmt'>// empêche les vérifications 'HTML' des champs du formulaire </span><br>  event.preventDefault();<br>  <span class='fc-k'>const</span> champs = <span class='fc-sep'>[</span><br>    <span class='fc-sep'>{</span> <span class='fc-m'>validate_fct</span>: validationPrenom, <span class='fc-m'>err</span>: prenom_error <span class='fc-sep'>}</span>,<br>    <span class='fc-sep'>{</span> <span class='fc-m'>validate_fct</span>: validationNom, <span class='fc-m'>err</span>: nom_error <span class='fc-sep'>}</span>,<br>    <span class='fc-sep'>{</span> <span class='fc-m'>validate_fct</span>: validationEmail, <span class='fc-m'>err</span>: mail_error <span class='fc-sep'>}</span>,<br>    <span class='fc-sep'>{</span> <span class='fc-m'>validate_fct</span>: validationDate, <span class='fc-m'>err</span>: date_error <span class='fc-sep'>}</span>,<br>    <span class='fc-sep'>{</span> <span class='fc-m'>validate_fct</span>: validationNbParticipation, <span class='fc-m'>err</span>: nb_part_error <span class='fc-sep'>}</span>,<br>    <span class='fc-sep'>{</span> <span class='fc-m'>validate_fct</span>: validationVille, <span class='fc-m'>err</span>: ville_error <span class='fc-sep'>}</span>,<br>    <span class='fc-sep'>{</span> <span class='fc-m'>validate_fct</span>: validationConditions, <span class='fc-m'>err</span>: conditions_error <span class='fc-sep'>}</span>,<br>  <span class='fc-sep'>]</span>;<br><br>  user = <span class='fc-sep'>{</span><span class='fc-sep'>}</span>;<br><br>  <span class='fc-k'>let</span> isValide = <span class='fc-t'>true</span>;<br>  champs.forEach(<span class='fc-k'>function</span> (elt) <span class='fc-sep'>{</span> <span class='cmt'>// applique la fonction passée en paramètre à chaque</span><br>    <span class='fc-t'>if</span> (!elt.<span class='fc-m'>validate_fct</span>()) <span class='fc-sep'>{</span>    <span class='cmt'>// élément du tableau champs.</span><br>      elt.<span class='fc-m'>err</span>.style.display = <span class='fc-s'>"block"</span>;<br>      isValide = false;<br>    <span class='fc-sep'>}</span> else <span class='fc-sep'>{</span><br>      elt.<span class='fc-m'>err</span>.style.display = <span class='fc-s'>"none"</span>;<br>    <span class='fc-sep'>}</span><br>  <span class='fc-sep'>}</span>);<br><br>  checkEvents(); <span class='cmt'>// verifie la souscription de l'utilisateur aux news.</span><br><br>  <span class='fc-t'>if</span> (isValide) <span class='fc-sep'>{</span><br>    <span class='cmt'>// tout OK... envoi du formulaire</span><br>    console.log(user);<br>    <span class='cmt'>// fetch().... envoi de user au server</span><br>    <span class='cmt'>// simulation ci-dessous</span><br>    soumissionBtn.<span class='fc-m'>disabled</span> = <span class='fc-t'>true</span>;<br>    document.<span class='fc-m'>getElementById</span>(<span class='fc-s'>'submitting'</span>).style.display = <span class='fc-s'>'block'</span>;<br>    setTimeout(() =&gt; <span class='fc-sep'>{</span>       <br>      document.<span class='fc-m'>getElementById</span>(<span class='fc-s'>'feedback-town'</span>).textContent = user.ville;<br>      showFeedBack();<br>      document.<span class='fc-m'>getElementById</span>(<span class='fc-s'>'submitting'</span>).style.display = <span class='fc-s'>'none'</span>;<br>      soumissionBtn.<span class='fc-m'>disabled</span> = false;<br>      resetForm();<br>    <span class='fc-sep'>}</span>, 2000);<br>  <span class='fc-sep'>}</span> <br><span class='fc-sep'>}</span><br></pre>
+
+<hr>
+</section>
+
+<section>
+<h2 id='3'>Validation du champ prénom</h2><pre class='fc'><span class='cmt'>// javascript</span><br><span class='fc-k'>const</span> regex_prenom = <span class='fc-t'>new</span> <span class='fc-m'>RegExp</span>(/( )*\p<span class='fc-sep'>{</span>Letter<span class='fc-sep'>}</span>+((<span class='fc-s'>'?| ?|-?)?(\p{Letter})+)+( )*/gu);'</span><br><br><span class='fc-k'>function</span> validationPrenom() <span class='fc-sep'>{</span><br>  <span class='fc-t'>if</span> (!f_prenom.value) <span class='fc-sep'>{</span><br>    prenom_error.<span class='fc-m'>textContent</span> = <span class='fc-s'>"Veuillez renseigner votre prénom"</span>;<br>    <span class='fc-t'>return</span> <span class='fc-t'>false</span>;<br>  <span class='fc-sep'>}</span><br>  <span class='fc-k'>const</span> matched = f_prenom.value.<span class='fc-m'>match</span>(regex_prenom);<br>  <span class='fc-t'>if</span> (matched && matched<span class='fc-sep'>[</span>0<span class='fc-sep'>]</span> === f_prenom.value) <span class='fc-sep'>{</span><br>    user.prenom = matched<span class='fc-sep'>[</span>0<span class='fc-sep'>]</span>.trim();<br>    <span class='fc-t'>return</span> <span class='fc-t'>true</span>;<br>  <span class='fc-sep'>}</span> <span class='fc-t'>else</span> <span class='fc-sep'>{</span><br>    prenom_error.<span class='fc-m'>textContent</span> = <span class='fc-s'>"Votre prénom doit être composé d'au moins deux lettres.\n Vous pouvez utiliser l'apostrophe, le trait d'union ou un espace pour les prénoms composés."</span>;<br>    <span class='fc-t'>return</span> <span class='fc-t'>false</span>;<br>  <span class='fc-sep'>}</span><br><span class='fc-sep'>}</span><br></pre>
+
+<hr>
+</section>
+
+<section>
+<h2 id='4'>Validation du champ date</h2><pre class='fc'><span class='cmt'>// javascript</span><br><span class='fc-k'>const</span> regex_prenom = <span class='fc-t'>new</span> <span class='fc-m'>RegExp</span>(/( )*\p<span class='fc-sep'>{</span>Letter<span class='fc-sep'>}</span>+((<span class='fc-s'>'?| ?|-?)?(\p{Letter})+)+( )*/gu);'</span><br><br><span class='fc-k'>function</span> validationDate() <span class='fc-sep'>{</span><br>  <span class='fc-t'>if</span> (!f_date.<span class='fc-m'>value</span>) <span class='fc-sep'>{</span><br>    date_error.<span class='fc-m'>textContent</span> = <span class='fc-s'>"Veuillez renseigner votre vraie date de naissance."</span>;<br>    <span class='fc-t'>return</span> <span class='fc-t'>false</span>;<br>  <span class='fc-sep'>}</span><br><br>  <span class='fc-k'>const</span> d = f_date.<span class='fc-m'>value</span>.split(<span class='fc-s'>'-'</span>);<br>  <span class='fc-k'>const</span> a = Number.<span class='fc-m'>parseInt</span>(d<span class='fc-sep'>[</span>0<span class='fc-sep'>]</span>);<br>  <span class='fc-k'>const</span> m = Number.<span class='fc-m'>parseInt</span>(d<span class='fc-sep'>[</span>1<span class='fc-sep'>]</span>);<br>  <span class='fc-k'>const</span> j = Number.<span class='fc-m'>parseInt</span>(d<span class='fc-sep'>[</span>2<span class='fc-sep'>]</span>);<br>  <span class='cmt'>// vérifie que l'utilisateur aura au moins 13 ans le jour du concours</span><br>  <span class='fc-k'>const</span> date_concours = <span class='fc-sep'>{</span> <span class='fc-s'>'a'</span>: 2022, <span class='fc-s'>'m'</span>: 10, <span class='fc-s'>'j'</span>: 15 <span class='fc-sep'>}</span>;<br>  <span class='fc-t'>if</span> (((a === date_concours.a - 13) && m === date_concours.m && j &lt;= date_concours.j) || ((a === date_concours.a - 13) && m &lt; date_concours.m) || (a &lt; date_concours.a - 13)) <span class='fc-sep'>{</span><br>    user.date_naissance = f_date.<span class='fc-m'>value</span>;<br>    <span class='fc-t'>return</span> <span class='fc-t'>true</span>;<br>  <span class='fc-sep'>}</span> <span class='fc-t'>else</span> <span class='fc-sep'>{</span><br>    date_error.<span class='fc-m'>textContent</span> = `Vous ne pouvez pas vous inscrire : vous devez avoir au moins 13 ans le jour du concours. (le $<span class='fc-sep'>{</span>date_concours.j<span class='fc-sep'>}</span>.$<span class='fc-sep'>{</span>date_concours.m<span class='fc-sep'>}</span>.$<span class='fc-sep'>{</span>date_concours.a<span class='fc-sep'>}</span>)`;<br>    <span class='fc-t'>return</span> <span class='fc-t'>false</span>;<br>  <span class='fc-sep'>}</span><br><span class='fc-sep'>}</span><br></pre>
+
+<hr>
+</section>
+
+<section>
+<h2 id='5'>Validation du nombre de participation</h2><pre class='fc'><span class='cmt'>// javascript</span><br><span class='fc-k'>function</span> validationNbParticipation() <span class='fc-sep'>{</span><br>  <span class='fc-t'>if</span> (!f_nb_part.<span class='fc-m'>value</span>) <span class='fc-sep'>{</span><br>    nb_part_error.<span class='fc-m'>textContent</span> = <span class='fc-s'>"Veuillez entrer votre nombre de participations à un de nos concours."</span>;<br>    <span class='fc-t'>return</span> <span class='fc-t'>false</span>;<br>  <span class='fc-sep'>}</span><br>  <span class='fc-k'>const</span> matched = f_nb_part.<span class='fc-m'>value</span>.match(regex_part);<br>  <span class='fc-t'>if</span> (matched && matched<span class='fc-sep'>[</span>0<span class='fc-sep'>]</span> === f_nb_part.<span class='fc-m'>value</span>) <span class='fc-sep'>{</span><br>    user.nb_part = matched<span class='fc-sep'>[</span>0<span class='fc-sep'>]</span>;<br>    <span class='fc-t'>return</span> <span class='fc-t'>true</span>;<br>  <span class='fc-sep'>}</span> <span class='fc-t'>else</span> <span class='fc-sep'>{</span><br>    nb_part_error.<span class='fc-m'>textContent</span> = <span class='fc-s'>"Veuillez entrer un nombre de participations entre 0 et 99."</span>;<br>    <span class='fc-t'>return</span> <span class='fc-t'>false</span>;<br>  <span class='fc-sep'>}</span><br><span class='fc-sep'>}</span><br></pre>
+
+<hr>
+</section>
+
+<section>
+<h2 id='6'>Validation du champ ville</h2><pre class='fc'><span class='cmt'>// javascript</span><br><span class='fc-k'>function</span> validationVille() <span class='fc-sep'>{</span><br>  <br>  <span class='fc-k'>let</span> villeElt = document.<span class='fc-m'>querySelector</span>(<span class='fc-s'>'input[name="location"]:checked'</span>);<br>  <span class='fc-t'>if</span> (!villeElt) <span class='fc-sep'>{</span><br>    ville_error.<span class='fc-m'>textContent</span> = <span class='fc-s'>"Vous devez choisir la ville dans laquelle vous voulez participer au tournoi."</span>;<br>    <span class='fc-t'>return</span> <span class='fc-t'>false</span>;<br>  <span class='fc-sep'>}</span> <span class='fc-t'>else</span> <span class='fc-sep'>{</span><br>    user.ville = villeElt.<span class='fc-m'>value</span>;<br>    <span class='fc-t'>return</span> <span class='fc-t'>true</span>;<br>  <span class='fc-sep'>}</span><br>  <br><span class='fc-sep'>}</span><br></pre>
+
+<hr>
+</section>
+
+<section>
+<h2 id='7'>Reset du formulaire</h2><pre class='fc'><span class='cmt'>// javascript</span><br><span class='fc-k'>function</span> resetForm() <span class='fc-sep'>{</span><br>  f_prenom.<span class='fc-m'>value</span> = <span class='fc-t'>null</span>;<br>  f_nom.<span class='fc-m'>value</span> = <span class='fc-t'>null</span>;<br>  f_mail.<span class='fc-m'>value</span> = <span class='fc-t'>null</span>;<br>  f_date.<span class='fc-m'>value</span> = <span class='fc-t'>null</span>;<br>  f_nb_part.<span class='fc-m'>value</span> = <span class='fc-t'>null</span>;<br>  <span class='fc-k'>let</span> villeElt = document.<span class='fc-m'>querySelector</span>(<span class='fc-s'>'input[name="location"]:checked'</span>);<br>  if (villeElt) villeElt.<span class='fc-m'>checked</span> = <span class='fc-t'>false</span>;<br>  f_events.<span class='fc-m'>checked</span> = <span class='fc-t'>false</span>;<br><span class='fc-sep'>}</span><br></pre>
+
+<hr>
+</section>
+
+            </div>
+          </div>
+            <footer>
+              <p>ÉRALYT-data &copy;2022</p>
+            </footer>
+        </div>
+      </div>
+
+      <div class="topics">
+        <div class="tw1">
+          <div><span>Dans cet article</span></div>
+          <ul><li><a href='#0'> récupération des principaux éléments DOM</a></li>
+<li><a href='#1'> Ajout des listeners</a></li>
+<li><a href='#2'>La fonction de validation</a></li>
+<li><a href='#3'>Validation du champ prénom</a></li>
+<li><a href='#4'>Validation du champ date</a></li>
+<li><a href='#5'>Validation du nombre de participation</a></li>
+<li><a href='#6'>Validation du champ ville</a></li>
+<li><a href='#7'>Reset du formulaire</a></li>
+           </ul>
+
+        </div>
+      </div>
+
+     </div>
+  </body>
+</html>

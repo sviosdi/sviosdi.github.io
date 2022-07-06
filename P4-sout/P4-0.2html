@@ -1,0 +1,16 @@
+title Projet 4
+h1 Développeur d'applications Javascript-React
+h1s Projet 4 - Présentation-fonctionnement.
+¤h2s¤ Présentation
+
+Pour ce projet on dispose d'une base de code déjà écrite. Il s'agit d'une landing page pour un site spécialisé dans les conférences et les concours de jeux. Une landing page étant une page d'accroche ayant un seul et unique objectif, qui est dans notre cas, attirer l'attention sur un concours de jeux en ligne et permettre l'inscription à ce concours.
+Seulement la base de code est incomplète et comporte des erreurs.
+Il a fallu donc :
+¤ul¤
+tester manuellement les fonctionnalités, les entrées du formulaire et l'affichage responsive.
+permettre de fermer la modale.
+implémenter les entrées du formulaire
+ajouter la validation des entrées ou afficher des messages d'erreurs
+ajouter une confirmation d'envoi réussi
+¤
+
