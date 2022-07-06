@@ -245,3 +245,81 @@ function resetForm() {
 ¤
 
 ¤hr¤
+
+¤h2s¤Fermeture de la modale
+
+¤fc¤
+¤t function let if else return true false
+¤m textContent querySelector value getComputedStyle getPropertyValue style setTimeout
+// javascript
+// fermeture du formulaire
+// Animation de fermeture du formulaire : il 'disparaît' comme il est apparu, mais environ trois fois plus vite.
+function closeModal() {
+  let d = getComputedStyle(document.documentElement).getPropertyValue('--modal-duration');
+  d = d.slice(0, -1);
+  const duration = Number.parseFloat(d) * 1000 / 3;
+  setTimeout(() => {
+    modalbg.style.display = "none"; // 'disparition' du formulaire
+    feedback.style.display = "none"; // 'disparition' du feedback
+  },
+    duration + 100);
+  contentClass.style.animationName = "modalclose";
+  contentClass.style.animationDuration = duration + "";
+  contentClass.style.animationFillMode = "forwards";
+}
+¤
+
+¤hr¤
+
+¤h2s¤Animations
+
+¤fc¤
+¤t @keyframes from to   translateY rotate
+¤m  transform opacity
+// css
+@keyframes modalopen {
+  from {
+    opacity: 0;
+    transform: translateY(-150px);
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalclose {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(-150px);
+  }
+}
+
+
+@keyframes submitAnim {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+  
+  
+@keyframes feedbackanim {
+  from {
+    bottom: 100%;
+  }
+
+  to {
+    bottom: 0px;
+  }
+}
+
+¤
+
+¤hr¤

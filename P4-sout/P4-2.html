@@ -105,6 +105,18 @@ On commence par récupérer en variables globales tous les principaux éléments
 <hr>
 </section>
 
+<section>
+<h2 id='8'>Fermeture de la modale</h2><pre class='fc'><span class='cmt'>// javascript</span><br><span class='cmt'>// fermeture du formulaire</span><br><span class='cmt'>// Animation de fermeture du formulaire : il 'disparaît' comme il est apparu, mais environ trois fois plus vite.</span><br><span class='fc-k'>function</span> closeModal() <span class='fc-sep'>{</span><br>  <span class='fc-k'>let</span> d = <span class='fc-m'>getComputedStyle</span>(document.documentElement).<span class='fc-m'>getPropertyValue</span>(<span class='fc-s'>'--modal-duration'</span>);<br>  d = d.slice(0, -1);<br>  <span class='fc-k'>const</span> duration = Number.parseFloat(d) * 1000 / 3;<br>  <span class='fc-m'>setTimeout</span>(() =&gt; <span class='fc-sep'>{</span><br>    modalbg.<span class='fc-m'>style</span>.display = <span class='fc-s'>"none"</span>; <span class='cmt'>// 'disparition' du formulaire</span><br>    feedback.<span class='fc-m'>style</span>.display = <span class='fc-s'>"none"</span>; <span class='cmt'>// 'disparition' du feedback</span><br>  <span class='fc-sep'>}</span>,<br>    duration + 100);<br>  contentClass.<span class='fc-m'>style</span>.animationName = <span class='fc-s'>"modalclose"</span>;<br>  contentClass.<span class='fc-m'>style</span>.animationDuration = duration + <span class='fc-s'>""</span>;<br>  contentClass.<span class='fc-m'>style</span>.animationFillMode = <span class='fc-s'>"forwards"</span>;<br><span class='fc-sep'>}</span><br></pre>
+
+<hr>
+</section>
+
+<section>
+<h2 id='9'>Animations</h2><pre class='fc'><span class='cmt'>// css</span><br><span class='fc-t'>@keyframes</span> modalopen <span class='fc-sep'>{</span><br>  <span class='fc-t'>from</span> <span class='fc-sep'>{</span><br>    <span class='fc-m'>opacity</span>: 0;<br>    <span class='fc-m'>transform</span>: <span class='fc-t'>translateY</span>(-150px);<br>  <span class='fc-sep'>}</span><br><br>  <span class='fc-t'>to</span> <span class='fc-sep'>{</span><br>    <span class='fc-m'>opacity</span>: 1;<br>  <span class='fc-sep'>}</span><br><span class='fc-sep'>}</span><br><br><span class='fc-t'>@keyframes</span> modalclose <span class='fc-sep'>{</span><br>  <span class='fc-t'>from</span> <span class='fc-sep'>{</span><br>    <span class='fc-m'>opacity</span>: 1;<br>  <span class='fc-sep'>}</span><br><br>  <span class='fc-t'>to</span> <span class='fc-sep'>{</span><br>    <span class='fc-m'>opacity</span>: 0;<br>    <span class='fc-m'>transform</span>: <span class='fc-t'>translateY</span>(-150px);<br>  <span class='fc-sep'>}</span><br><span class='fc-sep'>}</span><br><br><br><span class='fc-t'>@keyframes</span> submitAnim <span class='fc-sep'>{</span><br>  <span class='fc-t'>from</span> <span class='fc-sep'>{</span><br>    <span class='fc-m'>transform</span>: <span class='fc-t'>rotate</span>(0deg);<br>  <span class='fc-sep'>}</span><br><br>  <span class='fc-t'>to</span> <span class='fc-sep'>{</span><br>    <span class='fc-m'>transform</span>: <span class='fc-t'>rotate</span>(360deg);<br>  <span class='fc-sep'>}</span><br>  <br>  <br><span class='fc-t'>@keyframes</span> feedbackanim <span class='fc-sep'>{</span><br>  <span class='fc-t'>from</span> <span class='fc-sep'>{</span><br>    bottom: 100%;<br>  <span class='fc-sep'>}</span><br><br>  <span class='fc-t'>to</span> <span class='fc-sep'>{</span><br>    bottom: 0px;<br>  <span class='fc-sep'>}</span><br><span class='fc-sep'>}</span><br><br></pre>
+
+<hr>
+</section>
+
             </div>
           </div>
             <footer>
@@ -124,6 +136,8 @@ On commence par récupérer en variables globales tous les principaux éléments
 <li><a href='#5'>Validation du nombre de participation</a></li>
 <li><a href='#6'>Validation du champ ville</a></li>
 <li><a href='#7'>Reset du formulaire</a></li>
+<li><a href='#8'>Fermeture de la modale</a></li>
+<li><a href='#9'>Animations</a></li>
            </ul>
 
         </div>
