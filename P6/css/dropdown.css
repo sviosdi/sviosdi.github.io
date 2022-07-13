@@ -4,7 +4,7 @@ html {
 
 body {
     font-family: "DM Sans", sans-serif;
-   
+
 }
 
 *,
@@ -16,8 +16,8 @@ body {
 
 .dropdown {
     position: relative;
-    width: fit-content; 
-    cursor: pointer; 
+    width: fit-content;
+    cursor: pointer;
     border-radius: 5px;
     box-sizing: border-box;
 }
@@ -34,15 +34,23 @@ body {
 }
 
 .dropdown-menu {
-    display:none;
     position: absolute;
-    background-color:inherit;
+    background-color: inherit;
     width: 100%;
     z-index: 1000;
 }
 
-.dropdown.active {
+.dropdown.opened {
     border-radius: 5px 5px 0px 0px;
+}
+
+.dropdown.opened .dropdown-menu {
+
+    display: block;
+}
+
+.dropdown.closed .dropdown-menu {
+    display: none;
 }
 
 .dropdown-menu {
@@ -52,8 +60,8 @@ body {
 .p6 {
     width: 170px;
     background-color: #901c1c;
-    color: white; 
-    font-size: 18px;   
+    color: white;
+    font-size: 18px;
     font-weight: 700;
 }
 
@@ -61,13 +69,22 @@ body {
     position: relative;
     width: 100%;
     padding: 0px 20px;
+    transition: background-color 100ms;
+}
+
+.p6 .dropdown-item:last-child {
+    border-radius: 0 0 5px 5px;
+}
+
+.p6 .dropdown-menu .dropdown-item:hover {
+    background-color: #aa2f2f;
 }
 
 .p6.dropdown.active .dropdown-item:not(:last-child)::after {
     position: absolute;
     bottom: 0px;
     left: 10px;
-    content:" ";
+    content: " ";
     background-color: white;
     width: calc(100% - 20px);
     height: 1px;

@@ -1,5 +1,9 @@
+const ariaWrapper = document.getElementById("aria-wrapper");
+const modal = document.getElementById("contact_modal");
+
 function displayModal() {
-    const modal = document.getElementById("contact_modal");
+    ariaWrapper.setAttribute("aria-hidden", "true");
+    modal.setAttribute("aria-hidden", "false");
     modal.style.display = "block";
     const mod = document.querySelector(".modal");
     mod.style.display = "block";
@@ -8,13 +12,14 @@ function displayModal() {
 }
 
 function closeModal() {
-    const feedback =  document.querySelector(".feedback");
-    const modal = document.getElementById("contact_modal");
+    ariaWrapper.setAttribute("aria-hidden", "false");
+    modal.setAttribute("aria-hidden", "true");
+    const feedback = document.querySelector(".feedback"); 
     const mod = document.querySelector(".modal");
     mod.style.animationName = "modalclose";
     mod.style.animationDuration = "400ms";
     mod.style.animationFillMode = "forwards";
-    setTimeout(() => {
+    setTimeout(() => {        
         modal.style.display = "none";
         mod.style.display = "none"; // 'disparition' du formulaire
         feedback.style.display = "none"; // 'disparition' du feedback
@@ -38,7 +43,7 @@ function send(photographer) {
     feedback.style.display = "flex";
 
     let msg = document.querySelector(".feedback-msg");
-    msg.innerHTML = `Votre message a bien été envoyé à  ${photographer.name}, qui vous répondra très prochainement.<br>
+    msg.innerHTML = `Votre message a bien été envoyé à  ${photographer.name}.<br>Vous aurez une réponse très prochainement de sa part.<br>
     Merci ${prenom} pour l'intérêt que vous portez à son travail. `
 
 }

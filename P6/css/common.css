@@ -6,9 +6,13 @@ body {
 
 .logo {
     height: 50px;
-    margin-left: 100px;
 }
 
 * {
     box-sizing: border-box;
+}
+
+*:focus-visible {
+    outline: solid 2px #f83e3e;;
+    border-radius: 5px;
 }

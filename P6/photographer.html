@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
   <meta charset="utf-8">
@@ -14,47 +14,49 @@
 </head>
 
 <body>
-  <header>
-    <a href="/">
-      <img src="assets/images/logo.png" class="logo" />
-    </a>
-  </header>
-  <main id="main">
-    <div class="photograph-header">
-      <div>
-        <h1 class="pph-name"></h1>
-        <p class="pph-location"></p>
-        <p class="pph-tagline"></p>
+  <div id="aria-wrapper" aria-hidden="false">
+    <header>
+      <a href="/">
+        <img src="assets/images/logo.png" alt="Retour vers la page d'accueil" class="logo" />
+      </a>
+    </header>
+    <main id="main">
+      <div class="photograph-header">
+        <div>
+          <h1 class="pph-name"></h1>
+          <p class="pph-location"></p>
+          <p class="pph-tagline"></p>
+        </div>
+        <button class="contact_button" aria-label="Contactez-moi" onclick="displayModal()">Contactez-moi</button>
+        <img>
       </div>
-      <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
-      <img>
-    </div>
-    <div class="tri-section">
-      <label for="tri">Trier par</label>
-      <div id="tri" class="dropdown p6">
-        <div value="likes">Popularité</div>
-        <div value="date">Date</div>
-        <div value="title">Titre</div>
+      <div class="tri-section">
+        <p>Trier par</p>
+        <div id="tri" class="dropdown p6">
+          <div data-value="likes">Popularité</div>
+          <div data-value="date">Date</div>
+          <div data-value="title">Titre</div>
+        </div>
       </div>
-    </div>
-    <div class="pph-media">
-      
-    </div>
-    <div class="pph-price">
-      <div>
-        <p></p>
-        <i class="fa-solid fa-heart"></i>
+      <div class="pph-media">
+
       </div>
-      <div class="pph-price-fixed"></div>
-    </div>
-  </main>
-  <!-- la modal -->
-  <div id="contact_modal">
+      <div class="pph-price">
+        <div>
+          <p></p>
+          <i class="fa-solid fa-heart"></i>
+        </div>
+        <div class="pph-price-fixed"></div>
+      </div>
+    </main>
+  </div>
+ <!--------------------- la modale de contact  ------------------------------->
+  <div id="contact_modal" aria-hidden="true" role="dialog">
     <div class="modal">
       <header>
         <div>
-          <h2>Contactez-moi</h2>
-          <img src="assets/icons/close.svg" onclick="closeModal()" />
+          <h2 id="contactTitle">Contactez-moi</h2>
+          <img src="assets/icons/close.svg" onclick="closeModal()" alt="Fermeture de la boîte de dialogue de contact" />
         </div>
         <h2 class="modal-name"></h2>
       </header>
@@ -62,27 +64,47 @@
       <form>
         <div>
           <label for="prenom">Prénom</label>
-          <input type="text" id="prenom" name="prenom" />
+          <input type="text" id="prenom" name="prenom" aria-label="prénom" />
         </div>
         <div>
           <label for="nom">Nom</label>
-          <input type="text" id="nom" name="nom" />
+          <input type="text" id="nom" name="nom" aria-label="nom" />
         </div>
         <div>
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" />
+          <input type="email" id="email" name="email" aria-label="adresse email"/>
         </div>
         <div>
           <label for="message">Votre message</label>
-          <textarea rows="5" cols="35" id="message" name="message"></textarea>
+          <textarea rows="5" cols="35" id="message" name="message" aria-label="entrez votre message"></textarea>
         </div>
-        <button class="contact_button">Envoyer</button>
+        <button class="contact_button" aria-label="Envoyer le formulaire">Envoyer</button>
       </form>
       <div class="feedback">
         <div>
-          <span class="close" onclick="closeModal()"></span>
+          <span class="close" aria-label="Fermer le formulaire de contact" onclick="closeModal()"></span>
           <div class="feedback-msg"></div>
         </div>
+      </div>
+    </div>
+  </div>
+  <!-------------------------- la lightbox ----------------------------------->
+  <div class="lightbox-bg" aria-hidden="true" role="dialog" aria-label="vue de l'image agrandie et dans son intégralité">
+    <div class="lightbox">
+      <div class="lb-wrapper">
+        <div class="lb-left">
+          <i aria-label="image précédente" class="fa-solid fa-chevron-left"></i>
+        </div>
+        <div class="lb-content"></div>
+        <div class="lb-right">
+          <i aria-label="bouton de fermeture" class="fa-solid fa-xmark"></i>
+          <div>
+            <i aria-label="image suivante" class="fa-solid fa-chevron-right"></i>
+          </div>
+        </div>
+      </div>
+      <div class="lb-title">
+        <div>Title</div>
       </div>
     </div>
   </div>
@@ -92,6 +114,7 @@
   <script src="scripts/factories/md-factory.js"></script>
   <script src="scripts/pages/photographer.js"></script>
   <script src="scripts/utils/dropdown.js"></script>
+  <script src="scripts/utils/lightbox.js"></script>
 </body>
 
 </html>
